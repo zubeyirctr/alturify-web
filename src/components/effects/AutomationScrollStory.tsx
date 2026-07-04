@@ -16,6 +16,7 @@ export interface AutomationStageCopy {
   label: string
   title: string
   description: string
+  items: string[]
 }
 
 const VIEW_W = 800
@@ -39,6 +40,8 @@ const CHAOS_LINKS: Array<[number, number]> = [
   [2, 4],
   [0, 4],
 ]
+
+const DOT_CLASS = ['bg-on-surface-variant', 'bg-primary', 'bg-accent-cyan']
 
 function ChaosParticle({
   progress,
@@ -143,7 +146,11 @@ function AutomationScene({ progress }: { progress: MotionValue<number> }) {
       ))}
 
       <motion.g
-        style={{ opacity: outputOpacity, scale: outputScale, transformOrigin: `${OUTPUT_X}px ${ALIGNED_Y}px` }}
+        style={{
+          opacity: outputOpacity,
+          scale: outputScale,
+          transformOrigin: `${OUTPUT_X}px ${ALIGNED_Y}px`,
+        }}
       >
         <g transform={`translate(${OUTPUT_X}, ${ALIGNED_Y})`}>
           <PulseRings className="text-accent-cyan" />
@@ -151,6 +158,19 @@ function AutomationScene({ progress }: { progress: MotionValue<number> }) {
         </g>
       </motion.g>
     </svg>
+  )
+}
+
+function StageBullets({ items, toneIndex }: { items: string[]; toneIndex: number }) {
+  return (
+    <ul className="mt-3 flex flex-col gap-1.5">
+      {items.map((item) => (
+        <li key={item} className="flex items-center gap-2 text-body-md text-on-surface-variant">
+          <span className={cn('h-1 w-1 shrink-0 rounded-full', DOT_CLASS[toneIndex])} />
+          {item}
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -171,6 +191,9 @@ function AutomationStaticFrames({ stages }: { stages: AutomationStageCopy[] }) {
           </span>
           <h3 className="text-body-lg font-semibold text-on-background">{stage.title}</h3>
           <p className="text-body-md text-on-surface-variant">{stage.description}</p>
+          <div className="text-left">
+            <StageBullets items={stage.items} toneIndex={index} />
+          </div>
         </Card>
       ))}
     </div>
@@ -210,39 +233,42 @@ export function AutomationScrollStory({ stages }: { stages: AutomationStageCopy[
 
   return (
     <div ref={containerRef} className="relative h-[280vh]">
-      <div className="sticky top-[104px] flex h-[70vh] max-h-[560px] min-h-[420px] flex-col justify-center gap-6">
-        <div className="glass-surface light-leak extruded-glow relative overflow-hidden rounded-lg p-2 md:p-4">
-          <AutomationScene progress={scrollYProgress} />
-        </div>
-
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
-          <div className="flex items-center gap-2">
+      <div className="sticky top-[104px]">
+        <div className="glass-surface light-leak extruded-glow rounded-lg p-4 md:p-6">
+          <div className="mb-4 flex items-center justify-center gap-2">
             {stages.map((s, index) => (
               <span
                 key={s.label}
                 className={cn(
-                  'h-1 w-8 rounded-full transition-colors duration-300',
+                  'h-1 w-10 rounded-full transition-colors duration-300',
                   index === activeStage ? 'bg-accent-cyan' : 'bg-outline-variant/40',
                 )}
               />
             ))}
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeStage}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3 }}
-            >
-              <span className="font-tech text-label-caps uppercase tracking-[0.1em] text-accent-cyan">
-                {String(activeStage + 1).padStart(2, '0')} — {stage.label}
-              </span>
-              <h3 className="text-body-lg font-semibold text-on-background">{stage.title}</h3>
-              <p className="mt-1 text-body-md text-on-surface-variant">{stage.description}</p>
-            </motion.div>
-          </AnimatePresence>
+          <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[1.4fr_1fr] md:gap-8">
+            <div className="relative aspect-[5/2] w-full overflow-hidden rounded-md">
+              <AutomationScene progress={scrollYProgress} />
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeStage}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <span className="font-tech text-label-caps uppercase tracking-[0.1em] text-accent-cyan">
+                  {String(activeStage + 1).padStart(2, '0')} — {stage.label}
+                </span>
+                <h3 className="mt-1 text-headline-md text-on-background">{stage.title}</h3>
+                <p className="mt-1 text-body-md text-on-surface-variant">{stage.description}</p>
+                <StageBullets items={stage.items} toneIndex={activeStage} />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>
