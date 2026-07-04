@@ -32,7 +32,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="mx-auto max-w-shell pb-12 lg:pb-24">
+    <section id="contact" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <FadeInView>
         <div className="mb-6 flex flex-col items-center gap-1 text-center">
           <Badge tone="primary">{t.contact.badge}</Badge>

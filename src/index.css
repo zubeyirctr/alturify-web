@@ -57,6 +57,12 @@
   --color-on-background: #dce1fb;
   --color-surface-variant: #2e3447;
 
+  /* Secondary accents layered on top of the design-system palette:      */
+  /* an electric-cyan pulse accent and a pink tone so category-tinted    */
+  /* icons (services, etc.) don't all read as the same purple.           */
+  --color-accent-cyan: #00d4ff;
+  --color-accent-pink: #ff5fa2;
+
   /* Type scale — text-{name} utilities carry size/leading/tracking/weight together */
   --text-display-lg: 72px;
   --text-display-lg--line-height: 80px;
@@ -162,7 +168,8 @@ body {
       color-mix(in oklab, var(--color-secondary-container) 20%, transparent),
       transparent 65%
     ),
-    var(--color-background);
+    /* Base depth vignette — brighter center fading to a darker edge */
+    radial-gradient(120% 100% at 50% 0%, #0f1424 0%, #080a14 100%);
 }
 
 .void-field::after {
@@ -191,6 +198,8 @@ body {
   --glow-indigo: rgba(99, 102, 241, 0.3);
   --glow-indigo-strong: rgba(99, 102, 241, 0.5);
   --glow-cyan: rgba(14, 165, 233, 0.4);
+  /* Accent purple, ~20% brighter — for hover/glow states only, base hue unchanged */
+  --color-primary-container-bright: color-mix(in oklab, var(--color-primary-container) 80%, white 20%);
 }
 
 /* ------------------------------------------------------------------ */
@@ -230,15 +239,21 @@ body {
 .extruded-glow {
   box-shadow:
     0 24px 48px -20px color-mix(in oklab, var(--color-primary-container) 45%, transparent),
-    0 2px 0 0 color-mix(in oklab, white 8%, transparent) inset;
-  transition: box-shadow 0.25s ease;
+    0 1px 0 0 color-mix(in oklab, white 10%, transparent) inset,
+    0 -12px 20px -16px color-mix(in oklab, black 55%, transparent) inset;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .extruded-glow:hover {
+  border-color: color-mix(in oklab, var(--color-primary-container-bright) 55%, transparent);
   box-shadow:
-    0 24px 48px -20px color-mix(in oklab, var(--color-primary-container) 45%, transparent),
-    0 2px 0 0 color-mix(in oklab, white 8%, transparent) inset,
-    0 0 20px var(--glow-indigo);
+    0 28px 56px -20px color-mix(in oklab, var(--color-primary-container) 55%, transparent),
+    0 1px 0 0 color-mix(in oklab, white 12%, transparent) inset,
+    0 -12px 20px -16px color-mix(in oklab, black 55%, transparent) inset,
+    0 0 24px var(--glow-indigo);
 }
 
 .glow-ring:hover,
@@ -285,4 +300,62 @@ body {
 
 .pulse-ring {
   animation: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* Section divider — a subtle gradient "bridge" between sections,      */
+/* used instead of relying on raw empty space alone.                  */
+/* ------------------------------------------------------------------ */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--color-primary-container) 45%, transparent) 50%,
+    transparent 100%
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Slow-drifting mesh background for the live-stats panel             */
+/* ------------------------------------------------------------------ */
+@keyframes mesh-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 64px 64px;
+  }
+}
+
+.mesh-drift {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-accent-cyan) 14%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-accent-cyan) 14%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 32px 32px;
+  animation: mesh-drift 12s linear infinite;
+}
+
+/* ------------------------------------------------------------------ */
+/* Respect the user's OS-level motion preference: collapse all CSS     */
+/* animations/transitions to (near) instant instead of removing them, */
+/* so end-states still apply without the motion itself.               */
+/* ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

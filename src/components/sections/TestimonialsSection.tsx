@@ -7,7 +7,7 @@ export function TestimonialsSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="mx-auto max-w-shell pb-12 lg:pb-24">
+    <section className="mx-auto max-w-shell pb-8 lg:pb-16">
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="tertiary">{t.testimonials.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.testimonials.heading}</h2>
@@ -16,7 +16,7 @@ export function TestimonialsSection() {
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
         {t.testimonials.items.map((testimonial, index) => (
           <FadeInView key={testimonial.name + index} delay={index * 0.1}>
-            <Card className="flex h-full flex-col gap-4">
+            <Card interactive className="flex h-full flex-col gap-4">
               <p className="text-body-md text-on-surface-variant">“{testimonial.quote}”</p>
               <div className="mt-auto flex items-center gap-2">
                 <span className="glass-surface flex h-4 w-4 shrink-0 items-center justify-center rounded-full">

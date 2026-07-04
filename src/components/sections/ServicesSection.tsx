@@ -1,27 +1,30 @@
 import { Badge } from '@/components/ui/Badge'
 import { Card } from '@/components/ui/Card'
+import { TiltIcon } from '@/components/ui/TiltIcon'
 import { FadeInView } from '@/components/motion/Reveal'
 import { useLanguage } from '@/i18n/LanguageContext'
 import { cn } from '@/lib/cn'
 
-const TONES = ['primary', 'secondary', 'tertiary'] as const
+const TONES = ['purple', 'cyan', 'pink'] as const
 
 const TONE_ICON_CLASSES: Record<(typeof TONES)[number], string> = {
-  primary: 'border-primary-container/50 bg-primary-container/20 text-primary',
-  secondary: 'border-secondary-container/50 bg-secondary-container/20 text-secondary',
-  tertiary: 'border-tertiary-container/50 bg-tertiary-container/20 text-tertiary',
+  purple: 'border-primary-container/50 bg-primary-container/20 text-primary',
+  cyan: 'border-accent-cyan/50 bg-accent-cyan/20 text-accent-cyan',
+  pink: 'border-accent-pink/50 bg-accent-pink/20 text-accent-pink',
 }
 
 function ServiceIcon({ tone }: { tone: (typeof TONES)[number] }) {
   return (
-    <span
-      className={cn(
-        'relative flex h-6 w-6 items-center justify-center rounded-md border',
-        TONE_ICON_CLASSES[tone],
-      )}
-    >
-      <span className="h-1.5 w-1.5 rounded-full bg-current shadow-[0_0_10px_2px_currentColor]" />
-    </span>
+    <TiltIcon>
+      <span
+        className={cn(
+          'relative flex h-6 w-6 items-center justify-center rounded-md border',
+          TONE_ICON_CLASSES[tone],
+        )}
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-current shadow-[0_0_10px_2px_currentColor]" />
+      </span>
+    </TiltIcon>
   )
 }
 
@@ -29,7 +32,7 @@ export function ServicesSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="services" className="mx-auto max-w-shell pb-12 lg:pb-24">
+    <section id="services" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="primary">{t.services.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.services.heading}</h2>

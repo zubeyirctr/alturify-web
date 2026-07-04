@@ -13,6 +13,7 @@ import { FAQSection } from '@/components/sections/FAQSection'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { AppointmentModal } from '@/components/modals/AppointmentModal'
 import { CursorTrail } from '@/components/effects/CursorTrail'
+import { SectionDivider } from '@/components/ui/SectionDivider'
 import { useLanguage } from '@/i18n/LanguageContext'
 
 function App() {
@@ -30,13 +31,20 @@ function App() {
 
       <main className="px-2 md:px-8">
         <HeroSection />
+        <SectionDivider />
         <ProblemsSection />
         <SolutionsSection />
+        <SectionDivider />
         <ProcessSection />
+        <SectionDivider />
         <StatsSection />
+        <SectionDivider />
         <ServicesSection />
+        <SectionDivider />
         <TestimonialsSection />
+        <SectionDivider />
         <FAQSection />
+        <SectionDivider />
         <ContactSection />
       </main>
 

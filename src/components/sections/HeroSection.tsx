@@ -1,13 +1,19 @@
 import { Button } from '@/components/ui/Button'
 import { RevealGroup, RevealItem } from '@/components/motion/Reveal'
+import { ParticleNetwork } from '@/components/effects/ParticleNetwork'
 import { useLanguage } from '@/i18n/LanguageContext'
 
 export function HeroSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="top" className="mx-auto max-w-shell pt-4 pb-8 lg:pt-16 lg:pb-24">
-      <RevealGroup className="mx-auto flex max-w-[52ch] flex-col items-center gap-4 text-center">
+    <section
+      id="top"
+      className="relative mx-auto max-w-shell pt-4 pb-6 lg:pt-16 lg:pb-12 md:flex md:min-h-[440px] md:items-center md:justify-center"
+    >
+      <ParticleNetwork />
+
+      <RevealGroup className="relative z-10 mx-auto flex max-w-[52ch] flex-col items-center gap-4 text-center">
         <RevealItem>
           <h1 className="text-headline-lg-mobile text-gradient-signal lg:text-display-lg">
             {t.hero.headline}
