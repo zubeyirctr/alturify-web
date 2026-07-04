@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/zubeyircatar/Desktop/alturify web /src/components/ui",
+      "/Users/zubeyircatar/Desktop/alturify web /src/components/layout",
+      "/Users/zubeyircatar/Desktop/alturify web /src/components/sections"
+    ]
+  }
+}

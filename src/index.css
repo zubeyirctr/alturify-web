@@ -1,0 +1,288 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/* Alturify Intelligence — design tokens                              */
+/* Source of truth: aether-tech-design-system.md (YAML frontmatter)   */
+/* ------------------------------------------------------------------ */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-tech: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Color tokens — copied verbatim from the design system */
+  --color-surface: #0c1324;
+  --color-surface-dim: #0c1324;
+  --color-surface-bright: #33394c;
+  --color-surface-container-lowest: #070d1f;
+  --color-surface-container-low: #151b2d;
+  --color-surface-container: #191f31;
+  --color-surface-container-high: #23293c;
+  --color-surface-container-highest: #2e3447;
+  --color-on-surface: #dce1fb;
+  --color-on-surface-variant: #c7c4d7;
+  --color-inverse-surface: #dce1fb;
+  --color-inverse-on-surface: #2a3043;
+  --color-outline: #908fa0;
+  --color-outline-variant: #464554;
+  --color-surface-tint: #c0c1ff;
+  --color-primary: #c0c1ff;
+  --color-on-primary: #1000a9;
+  --color-primary-container: #8083ff;
+  --color-on-primary-container: #0d0096;
+  --color-inverse-primary: #494bd6;
+  --color-secondary: #89ceff;
+  --color-on-secondary: #00344d;
+  --color-secondary-container: #00a2e6;
+  --color-on-secondary-container: #00344e;
+  --color-tertiary: #ddb7ff;
+  --color-on-tertiary: #490080;
+  --color-tertiary-container: #b76dff;
+  --color-on-tertiary-container: #400071;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #e1e0ff;
+  --color-primary-fixed-dim: #c0c1ff;
+  --color-on-primary-fixed: #07006c;
+  --color-on-primary-fixed-variant: #2f2ebe;
+  --color-secondary-fixed: #c9e6ff;
+  --color-secondary-fixed-dim: #89ceff;
+  --color-on-secondary-fixed: #001e2f;
+  --color-on-secondary-fixed-variant: #004c6e;
+  --color-tertiary-fixed: #f0dbff;
+  --color-tertiary-fixed-dim: #ddb7ff;
+  --color-on-tertiary-fixed: #2c0051;
+  --color-on-tertiary-fixed-variant: #6900b3;
+  --color-background: #0c1324;
+  --color-on-background: #dce1fb;
+  --color-surface-variant: #2e3447;
+
+  /* Type scale — text-{name} utilities carry size/leading/tracking/weight together */
+  --text-display-lg: 72px;
+  --text-display-lg--line-height: 80px;
+  --text-display-lg--letter-spacing: -0.04em;
+  --text-display-lg--font-weight: 800;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-lg-mobile: 32px;
+  --text-headline-lg-mobile--line-height: 40px;
+  --text-headline-lg-mobile--font-weight: 700;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-label-caps: 12px;
+  --text-label-caps--line-height: 16px;
+  --text-label-caps--letter-spacing: 0.1em;
+  --text-label-caps--font-weight: 700;
+
+  /* Shape */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing — base unit 8px drives the whole numeric scale (p-1 = 8px, p-3 = 24px, p-8 = 64px) */
+  --spacing: 8px;
+  --container-shell: 1280px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  /* Keeps anchor-scrolled targets from landing underneath the sticky glass header */
+  scroll-padding-top: 96px;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary-container) 55%, transparent);
+  color: var(--color-on-background);
+}
+
+/* ------------------------------------------------------------------ */
+/* Void background — radial "hotspots" over Deep Space Blue, plus a   */
+/* faint HUD grid and grain for the command-center atmosphere.        */
+/* ------------------------------------------------------------------ */
+.void-field {
+  position: relative;
+  isolation: isolate;
+  background: var(--color-background);
+}
+
+.void-field::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(
+      780px 520px at 82% -8%,
+      color-mix(in oklab, var(--color-primary-container) 38%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      620px 480px at -6% 22%,
+      color-mix(in oklab, var(--color-tertiary-container) 24%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 640px at 50% 118%,
+      color-mix(in oklab, var(--color-secondary-container) 20%, transparent),
+      transparent 65%
+    ),
+    var(--color-background);
+}
+
+.void-field::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-on-surface) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-on-surface) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 40%, transparent 100%);
+}
+
+/* Tier 2 interactive glow — Neon Indigo, per design system spec */
+:root {
+  --glow-indigo: rgba(99, 102, 241, 0.3);
+  --glow-indigo-strong: rgba(99, 102, 241, 0.5);
+  --glow-cyan: rgba(14, 165, 233, 0.4);
+}
+
+/* ------------------------------------------------------------------ */
+/* Glassmorphism + "extruded light" primitives, shared by components  */
+/* ------------------------------------------------------------------ */
+.glass-surface {
+  background: color-mix(in oklab, var(--color-surface-container) 60%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid color-mix(in oklab, white 10%, transparent);
+}
+
+.light-leak {
+  position: relative;
+}
+
+.light-leak::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, white 45%, transparent) 0%,
+    color-mix(in oklab, white 6%, transparent) 30%,
+    transparent 55%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.extruded-glow {
+  box-shadow:
+    0 24px 48px -20px color-mix(in oklab, var(--color-primary-container) 45%, transparent),
+    0 2px 0 0 color-mix(in oklab, white 8%, transparent) inset;
+  transition: box-shadow 0.25s ease;
+}
+
+.extruded-glow:hover {
+  box-shadow:
+    0 24px 48px -20px color-mix(in oklab, var(--color-primary-container) 45%, transparent),
+    0 2px 0 0 color-mix(in oklab, white 8%, transparent) inset,
+    0 0 20px var(--glow-indigo);
+}
+
+.glow-ring:hover,
+.glow-ring:focus-visible {
+  box-shadow: 0 0 20px var(--glow-indigo);
+}
+
+.text-gradient-signal {
+  background: linear-gradient(
+    100deg,
+    var(--color-on-background) 20%,
+    var(--color-secondary) 70%,
+    var(--color-primary) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Recolors the dark, fixed-fill social icons in /icons.svg for the dark theme */
+.icon-invert {
+  filter: invert(1) brightness(1.7);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.icon-invert:hover {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* AI Progress Indicator — expanding pulse rings                      */
+/* ------------------------------------------------------------------ */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.4s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
+}
