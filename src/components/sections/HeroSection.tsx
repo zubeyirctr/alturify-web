@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/Button'
 import { RevealGroup, RevealItem } from '@/components/motion/Reveal'
 import { ParticleNetwork } from '@/components/effects/ParticleNetwork'
+import { AutomationLoop } from '@/components/effects/AutomationLoop'
 import { useLanguage } from '@/i18n/LanguageContext'
 
 export function HeroSection() {
@@ -31,6 +32,9 @@ export function HeroSection() {
           <Button variant="secondary" size="lg">
             {t.hero.ctaSecondary}
           </Button>
+        </RevealItem>
+        <RevealItem className="mt-2 w-full">
+          <AutomationLoop className="mx-auto h-14 w-full max-w-md text-primary opacity-80" />
         </RevealItem>
       </RevealGroup>
     </section>

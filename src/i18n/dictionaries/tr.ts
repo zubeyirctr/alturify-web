@@ -63,22 +63,21 @@ export const tr: Dictionary = {
     badge: 'Nasıl Çalışır',
     heading: 'Lorem ipsum süreç başlığı',
     subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
-    steps: [
+    stages: [
       {
-        title: 'Yer Tutucu Adım Bir',
+        label: 'Manuel Süreç',
+        title: 'Yer Tutucu — dağınık, elle yürütülen süreç',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       },
       {
-        title: 'Yer Tutucu Adım İki',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation.',
+        label: 'Dönüşüm',
+        title: 'Yer Tutucu — hat oturmaya başlıyor',
+        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
       },
       {
-        title: 'Yer Tutucu Adım Üç',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate.',
-      },
-      {
-        title: 'Yer Tutucu Adım Dört',
-        description: 'Excepteur sint occaecat cupidatat non proident.',
+        label: 'Otomasyon',
+        title: 'Yer Tutucu — temiz, otomatik çıktı',
+        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
       },
     ],
   },

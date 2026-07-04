@@ -1,9 +1,18 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(cd \"/Users/zubeyircatar/Desktop/alturify web \" && grep -n -A 25 \"^  process:\" src/i18n/dictionaries/en.ts)",
+      "Read(//Users/zubeyircatar/Desktop/alturify web /src/i18n/dictionaries/**)",
+      "Bash(cd \"/Users/zubeyircatar/Desktop/alturify web \" && grep -rn \"process\\\\.steps\" src 2>&1)",
+      "Read(//Users/zubeyircatar/Desktop/alturify web /src/**)",
+      "Bash(npx tsc *)",
+      "Bash(node .qa-automation.mjs)"
+    ],
     "additionalDirectories": [
       "/Users/zubeyircatar/Desktop/alturify web /src/components/ui",
       "/Users/zubeyircatar/Desktop/alturify web /src/components/layout",
-      "/Users/zubeyircatar/Desktop/alturify web /src/components/sections"
+      "/Users/zubeyircatar/Desktop/alturify web /src/components/sections",
+      "/Users/zubeyircatar/Desktop/alturify web /src/i18n/dictionaries"
     ]
   }
 }

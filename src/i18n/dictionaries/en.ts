@@ -61,22 +61,21 @@ export const en = {
     badge: 'How It Works',
     heading: 'Lorem ipsum process heading',
     subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
-    steps: [
+    stages: [
       {
-        title: 'Placeholder Step One',
+        label: 'Manual Work',
+        title: 'Placeholder — scattered, manual process',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       },
       {
-        title: 'Placeholder Step Two',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation.',
+        label: 'Transformation',
+        title: 'Placeholder — the pipeline takes shape',
+        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
       },
       {
-        title: 'Placeholder Step Three',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate.',
-      },
-      {
-        title: 'Placeholder Step Four',
-        description: 'Excepteur sint occaecat cupidatat non proident.',
+        label: 'Automation',
+        title: 'Placeholder — clean, automated output',
+        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
       },
     ],
   },
