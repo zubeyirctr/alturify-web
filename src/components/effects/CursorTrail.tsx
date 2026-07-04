@@ -62,14 +62,22 @@ export function CursorTrail() {
         if (t <= 0) continue
         const radius = 1 + 2 * t
 
+        // Soft outer glow — kept small/subtle, just punchier so it still reads
+        // over busy backgrounds (e.g. the hero's particle network).
         const gradient = ctx!.createRadialGradient(point.x, point.y, 0, point.x, point.y, radius)
-        gradient.addColorStop(0, `rgba(192, 193, 255, ${0.3 * t})`)
-        gradient.addColorStop(0.55, `rgba(183, 109, 255, ${0.14 * t})`)
+        gradient.addColorStop(0, `rgba(255, 255, 255, ${0.5 * t})`)
+        gradient.addColorStop(0.4, `rgba(192, 193, 255, ${0.4 * t})`)
         gradient.addColorStop(1, 'rgba(183, 109, 255, 0)')
 
         ctx!.fillStyle = gradient
         ctx!.beginPath()
         ctx!.arc(point.x, point.y, radius, 0, Math.PI * 2)
+        ctx!.fill()
+
+        // Tiny bright core so a fresh point reads as a spark rather than a smudge
+        ctx!.fillStyle = `rgba(255, 255, 255, ${0.6 * t})`
+        ctx!.beginPath()
+        ctx!.arc(point.x, point.y, Math.max(0.5, radius * 0.25), 0, Math.PI * 2)
         ctx!.fill()
       }
 
