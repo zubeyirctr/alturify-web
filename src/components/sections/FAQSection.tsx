@@ -10,7 +10,7 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="mx-auto max-w-shell pb-8 lg:pb-16">
+    <section id="faq" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="secondary">{t.faq.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.faq.heading}</h2>

@@ -19,9 +19,11 @@ export function ProblemsSection() {
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="error">{t.problems.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.problems.heading}</h2>
-        <p className="max-w-prose text-body-md text-on-surface-variant">
-          {t.problems.subheading}
-        </p>
+        {t.problems.subheading && (
+          <p className="max-w-prose text-body-md text-on-surface-variant">
+            {t.problems.subheading}
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3">

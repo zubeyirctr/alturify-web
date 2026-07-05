@@ -36,9 +36,11 @@ export function ServicesSection() {
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="primary">{t.services.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.services.heading}</h2>
-        <p className="max-w-prose text-body-md text-on-surface-variant">
-          {t.services.subheading}
-        </p>
+        {t.services.subheading && (
+          <p className="max-w-prose text-body-md text-on-surface-variant">
+            {t.services.subheading}
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">

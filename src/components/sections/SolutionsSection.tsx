@@ -19,9 +19,11 @@ export function SolutionsSection() {
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="primary">{t.solutions.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.solutions.heading}</h2>
-        <p className="max-w-prose text-body-md text-on-surface-variant">
-          {t.solutions.subheading}
-        </p>
+        {t.solutions.subheading && (
+          <p className="max-w-prose text-body-md text-on-surface-variant">
+            {t.solutions.subheading}
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-3">

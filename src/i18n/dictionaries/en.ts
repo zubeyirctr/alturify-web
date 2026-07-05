@@ -1,84 +1,98 @@
 export const en = {
   meta: {
-    title: 'Alturify Intelligence',
-    description: 'Alturify — AI automation for enterprise operations.',
+    title: 'Alturify — AI Automation Agency | Automate Your Business Processes',
+    description:
+      'Automate your repetitive business processes with AI. Process automation, AI assistants, integrations, and custom solutions. Book a free assessment call.',
   },
   nav: {
     services: 'Services',
-    about: 'About',
-    blog: 'Blog',
+    howItWorks: 'How It Works',
+    faq: 'FAQ',
     contact: 'Contact',
   },
   header: {
-    cta: 'Schedule a Call',
+    cta: 'Book a Call',
   },
   hero: {
-    headline: 'Lorem ipsum dolor sit amet headline',
+    headline: 'Every manual process is waiting to be automated',
     subheading:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeholder copy for the hero subheading.',
-    ctaPrimary: 'Get Started',
-    ctaSecondary: 'How It Works?',
+      "From data entry to customer communication, reporting to approval flows — hand your team's most time-consuming work to AI. We handle the setup; you measure the results.",
+    ctaPrimary: 'Get a Free Assessment',
+    ctaSecondary: 'How It Works',
   },
   problems: {
     badge: 'The Problem',
-    heading: 'Lorem ipsum problems heading',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
+    heading: 'Does any of this sound familiar?',
+    subheading: '',
     items: [
       {
-        title: 'Placeholder Problem One',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'Hours lost to repetitive work',
+        description:
+          'Your team spends every day copy-pasting, entering data by hand, and shuttling information between systems — leaving no time for work that actually creates value.',
       },
       {
-        title: 'Placeholder Problem Two',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+        title: 'Small errors, big costs',
+        description:
+          'In manual processes, one missed line or mistyped figure comes back as refunds, delays, and lost customers.',
       },
       {
-        title: 'Placeholder Problem Three',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+        title: 'Does growing mean hiring more?',
+        description:
+          "As volume grows, hiring feels like the only answer. But unless your processes scale, a bigger team just means bigger chaos.",
       },
     ],
   },
   solutions: {
     badge: 'Our Solutions',
-    heading: 'Lorem ipsum solutions heading',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
+    heading: "Here's how Alturify solves it",
+    subheading: '',
     items: [
       {
-        title: 'Placeholder Solution One',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'End-to-end automation',
+        description:
+          'We turn repetitive tasks into AI-powered workflows. Hours become minutes, and your team gets back to strategic work.',
       },
       {
-        title: 'Placeholder Solution Two',
-        description: 'Excepteur sint occaecat cupidatat non proident sunt in culpa.',
+        title: 'Consistent and auditable',
+        description:
+          'Automations do the same job at the same quality every time, with every step logged. Error rates drop; auditing gets easy.',
       },
       {
-        title: 'Placeholder Solution Three',
-        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        title: '10x the volume, same team',
+        description:
+          'When volume grows, automations scale with you. Instead of new hires, you multiply the impact of the team you already have.',
       },
     ],
   },
   process: {
     badge: 'How It Works',
-    heading: 'Lorem ipsum process heading',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
+    heading: 'How we take you to automation',
+    subheading: 'In three clear stages, we take you from your current process to full automation.',
     stages: [
       {
-        label: 'Manual Work',
-        title: 'Placeholder — scattered, manual process',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        items: ['Scattered data sources', 'Manual data entry', 'Repeated errors'],
+        label: 'Current State',
+        title: 'Scattered, manual process',
+        description:
+          'First we map your current workflow: where time is lost, where errors are born, and which steps are ripe for automation.',
+        items: ['Scattered data sources', 'Manual data entry and transfer', 'Recurring errors'],
       },
       {
-        label: 'Transformation',
-        title: 'Placeholder — the pipeline takes shape',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
-        items: ['Workflow being defined', 'Steps getting connected'],
+        label: 'Build',
+        title: 'The flow is designed and connected',
+        description:
+          'We build the automation pipeline that connects AI models with your existing tools — CRM, ERP, email, spreadsheets.',
+        items: [
+          'Flow design and integration',
+          'Connects to your existing tools',
+          'Tested on real data',
+        ],
       },
       {
-        label: 'Automation',
-        title: 'Placeholder — clean, automated output',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-        items: ['Automatic output', 'Zero manual steps', 'Instant reporting'],
+        label: 'Live',
+        title: 'The process runs itself',
+        description:
+          'The system is live: work flows on its own while you watch the results and reports. We keep monitoring and improving.',
+        items: ['Runs 24/7', 'Zero manual steps', 'Real-time reporting and monitoring'],
       },
     ],
   },
@@ -86,111 +100,133 @@ export const en = {
     badge: 'Live System',
     live: 'Live',
     items: [
-      { value: '98%', label: 'Placeholder — Accuracy Rate' },
-      { value: '12k+', label: 'Placeholder — Tasks Automated' },
-      { value: '4.6/5', label: 'Placeholder — Client Rating' },
-      { value: '24/7', label: 'Placeholder — Monitoring' },
+      { value: '12,400+', label: 'Hours automated' },
+      { value: '99.2%', label: 'Process accuracy' },
+      { value: '8x', label: 'Average speed-up' },
+      { value: '24/7', label: 'Always-on operation' },
     ],
   },
   services: {
     badge: 'Services',
-    heading: 'Lorem ipsum services heading',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
+    heading: 'What we do',
+    subheading: '',
     linkLabel: 'Learn More',
     items: [
       {
-        title: 'Placeholder Service One',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'Process Automation',
+        description:
+          'We automate repetitive operational processes end to end: approval flows, data transfer, invoicing, reporting.',
       },
       {
-        title: 'Placeholder Service Two',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+        title: 'AI Assistants & Chatbots',
+        description:
+          "We build intelligent assistants that answer customers, book appointments, and track orders — in your brand's voice.",
       },
       {
-        title: 'Placeholder Service Three',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+        title: 'Document & Data Processing',
+        description:
+          'Invoices, contracts, forms, emails... We use AI to read unstructured documents and feed them into your systems automatically.',
       },
       {
-        title: 'Placeholder Service Four',
-        description: 'Excepteur sint occaecat cupidatat non proident sunt in culpa.',
+        title: 'System Integrations',
+        description:
+          'CRM, ERP, e-commerce, accounting — we connect your siloed tools and unify data into a single flow.',
       },
       {
-        title: 'Placeholder Service Five',
-        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        title: 'Custom AI Solutions',
+        description:
+          'Where off-the-shelf tools fall short, we build AI models and internal tools tailored to your business.',
       },
       {
-        title: 'Placeholder Service Six',
-        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus.',
+        title: 'Automation Consulting',
+        description:
+          "Not sure where to start? We analyze your processes and map the highest-ROI automation opportunities into a roadmap.",
       },
     ],
   },
   testimonials: {
     badge: 'Testimonials',
-    heading: 'Lorem ipsum testimonials heading',
+    heading: 'What our clients say',
     items: [
       {
-        quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder quote.',
-        name: 'Placeholder Name',
-        role: 'Placeholder Role, Company One',
+        quote:
+          'Our order processing dropped from 3 days to 4 hours. The team now spends time with customers, not paperwork.',
+        name: 'A. Yılmaz',
+        role: 'Operations Director, e-commerce company',
       },
       {
-        quote: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco placeholder quote.',
-        name: 'Placeholder Name',
-        role: 'Placeholder Role, Company Two',
+        quote:
+          'Reporting was fully automated within the first month. We now walk into board meetings with the data already prepared.',
+        name: 'S. Demir',
+        role: 'General Manager, logistics company',
       },
       {
-        quote: 'Duis aute irure dolor in reprehenderit in voluptate placeholder quote.',
-        name: 'Placeholder Name',
-        role: 'Placeholder Role, Company Three',
+        quote:
+          'The most impressive part was the process itself: analysis, build, go-live — we knew exactly what was happening at every step.',
+        name: 'M. Kaya',
+        role: 'Founder, consulting firm',
       },
     ],
   },
   faq: {
     badge: 'FAQ',
-    heading: 'Lorem ipsum FAQ heading',
+    heading: 'Frequently Asked Questions',
     items: [
       {
-        question: 'Placeholder question one — lorem ipsum dolor sit amet?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder answer.',
+        question: 'How long does setup take?',
+        answer:
+          'It depends on scope: a simple automation can go live in 1–2 weeks, while multi-system integrations may take 4–8 weeks. You get a clear timeline in the first call.',
       },
       {
-        question: 'Placeholder question two — ut enim ad minim veniam?',
-        answer: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco placeholder answer.',
+        question: 'Will it integrate with my existing tools?',
+        answer:
+          'Almost certainly. We work with most CRMs, ERPs, e-commerce platforms, accounting software, and communication tools. For legacy systems without APIs, we have alternative approaches.',
       },
       {
-        question: 'Placeholder question three — duis aute irure dolor?',
-        answer: 'Duis aute irure dolor in reprehenderit in voluptate placeholder answer.',
+        question: 'How does pricing work?',
+        answer:
+          'We quote per project scope. After the process analysis, we offer a fixed-price build plus an optional monthly maintenance/improvement plan. The initial assessment call is free.',
       },
       {
-        question: 'Placeholder question four — excepteur sint occaecat?',
-        answer: 'Excepteur sint occaecat cupidatat non proident placeholder answer.',
+        question: 'Is our data safe?',
+        answer:
+          'Yes. Your data stays in your systems; automations run over authorized, encrypted connections. We sign GDPR/KVKK-compliant data processing agreements on request.',
       },
       {
-        question: 'Placeholder question five — sed ut perspiciatis?',
-        answer: 'Sed ut perspiciatis unde omnis iste natus error placeholder answer.',
+        question: "We don't have a technical team — is that a problem?",
+        answer:
+          "Not at all — most of our clients don't. We handle setup, maintenance, and monitoring; all you see are dashboards and results.",
       },
       {
-        question: 'Placeholder question six — at vero eos et accusamus?',
-        answer: 'At vero eos et accusamus et iusto odio dignissimos placeholder answer.',
+        question: 'Will automation replace our jobs?',
+        answer:
+          'The goal is to eliminate drudgery, not people. The typical outcome for our clients: same team, higher volume, more time for meaningful work.',
       },
     ],
   },
   contact: {
     badge: 'Contact',
-    heading: 'Lorem ipsum closing heading',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
-    scheduleButton: 'Schedule a Call',
+    schedule: {
+      heading: 'See the potential in 30 minutes',
+      description:
+        "Pick a date and time that works for you. On the call, we'll look at your processes and map what can be automated — free, no strings attached.",
+    },
     form: {
+      heading: 'Or drop us a line',
       name: 'Full Name',
       email: 'Email',
       problem: 'The problem you are facing',
       expectedSolution: 'The solution you expect',
       submit: 'Send',
-      successMessage: 'Thanks — your message has been sent (placeholder, not really submitted).',
+      successMessage: "We've received your message. We'll get back to you within 24 hours.",
+    },
+    info: {
+      email: 'hello@alturify.com',
+      location: 'Istanbul, Turkey',
     },
   },
   appointment: {
-    title: 'Schedule a Call',
+    title: 'Book a Call',
     subtitle: 'Pick a date and an available time slot.',
     selectDatePrompt: 'Select a date',
     selectTimePrompt: 'Available times',
@@ -203,22 +239,36 @@ export const en = {
   },
   footer: {
     brand: 'Alturify',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit placeholder line.',
+    description:
+      'Alturify — the automation agency turning repetitive business processes into intelligent workflows.',
     columns: [
       {
-        heading: 'Placeholder Column One',
-        links: ['Placeholder Link', 'Placeholder Link', 'Placeholder Link', 'Placeholder Link'],
+        heading: 'Company',
+        links: [
+          { label: 'How It Works', href: '#how-it-works' },
+          { label: 'Testimonials', href: '#testimonials' },
+          { label: 'FAQ', href: '#faq' },
+        ],
       },
       {
-        heading: 'Placeholder Column Two',
-        links: ['Placeholder Link', 'Placeholder Link', 'Placeholder Link', 'Placeholder Link'],
+        heading: 'Services',
+        links: [
+          { label: 'Process Automation', href: '#services' },
+          { label: 'AI Assistants', href: '#services' },
+          { label: 'Integrations', href: '#services' },
+          { label: 'Consulting', href: '#services' },
+        ],
       },
       {
-        heading: 'Placeholder Column Three',
-        links: ['Placeholder Link', 'Placeholder Link', 'Placeholder Link', 'Placeholder Link'],
+        heading: 'Contact',
+        links: [
+          { label: 'Book a Call', href: '#contact' },
+          { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
+          { label: 'LinkedIn', href: '#' },
+        ],
       },
     ],
-    copyright: 'Alturify Intelligence',
+    copyright: 'Alturify',
   },
 }
 

@@ -34,16 +34,16 @@ export function ContactSection() {
   return (
     <section id="contact" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <FadeInView>
-        <div className="mb-6 flex flex-col items-center gap-1 text-center">
+        <div className="mb-6 flex justify-center">
           <Badge tone="primary">{t.contact.badge}</Badge>
-          <h2 className="text-headline-md text-on-background">{t.contact.heading}</h2>
-          <p className="max-w-prose text-body-md text-on-surface-variant">
-            {t.contact.subheading}
-          </p>
         </div>
 
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
           <div className="glass-surface light-leak extruded-glow rounded-lg p-4">
+            <h3 className="text-headline-md text-on-background">{t.contact.schedule.heading}</h3>
+            <p className="mt-1 mb-4 text-body-md text-on-surface-variant">
+              {t.contact.schedule.description}
+            </p>
             <ScheduleWidget />
           </div>
 
@@ -52,6 +52,7 @@ export function ContactSection() {
               <p className="text-body-md text-on-background">{t.contact.form.successMessage}</p>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <h3 className="text-headline-md text-on-background">{t.contact.form.heading}</h3>
                 <Field label={t.contact.form.name}>
                   <Input name="name" required />
                 </Field>
@@ -70,6 +71,19 @@ export function ContactSection() {
               </form>
             )}
           </Card>
+        </div>
+
+        <div className="mt-4 flex flex-col items-center justify-center gap-1.5 text-center sm:flex-row sm:gap-4">
+          <a
+            href={`mailto:${t.contact.info.email}`}
+            className="font-tech text-label-caps uppercase tracking-[0.1em] text-on-surface-variant transition-colors hover:text-secondary"
+          >
+            {t.contact.info.email}
+          </a>
+          <span className="hidden text-on-surface-variant/40 sm:inline">•</span>
+          <span className="font-tech text-label-caps uppercase tracking-[0.1em] text-on-surface-variant">
+            {t.contact.info.location}
+          </span>
         </div>
       </FadeInView>
     </section>

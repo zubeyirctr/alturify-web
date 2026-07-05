@@ -9,8 +9,8 @@ export function Header() {
 
   const navLinks = [
     { label: t.nav.services, href: '#services' },
-    { label: t.nav.about, href: '#' },
-    { label: t.nav.blog, href: '#' },
+    { label: t.nav.howItWorks, href: '#how-it-works' },
+    { label: t.nav.faq, href: '#faq' },
     { label: t.nav.contact, href: '#contact' },
   ]
 

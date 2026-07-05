@@ -7,7 +7,7 @@ export function TestimonialsSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="mx-auto max-w-shell pb-8 lg:pb-16">
+    <section id="testimonials" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="tertiary">{t.testimonials.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.testimonials.heading}</h2>

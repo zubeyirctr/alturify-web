@@ -6,7 +6,7 @@ export function ProcessSection() {
   const { t } = useLanguage()
 
   return (
-    <section className="mx-auto max-w-shell pb-8 lg:pb-16">
+    <section id="how-it-works" className="mx-auto max-w-shell pb-8 lg:pb-16">
       <div className="mb-6 flex flex-col items-start gap-1">
         <Badge tone="secondary">{t.process.badge}</Badge>
         <h2 className="text-headline-md text-on-background">{t.process.heading}</h2>

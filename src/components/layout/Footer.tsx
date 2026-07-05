@@ -1,7 +1,44 @@
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { useLanguage } from '@/i18n/LanguageContext'
 
-const SOCIAL_ICONS = ['x-icon', 'github-icon', 'discord-icon', 'bluesky-icon']
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-2 w-2" fill="currentColor" aria-hidden="true">
+      <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.8c0-1.38-.03-3.16-1.98-3.16-1.98 0-2.28 1.5-2.28 3.06V21H9z" />
+    </svg>
+  )
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-2 w-2"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+function XIcon() {
+  return (
+    <svg className="icon-invert h-2 w-2" role="presentation" aria-hidden="true">
+      <use href="/icons.svg#x-icon" />
+    </svg>
+  )
+}
+
+const SOCIAL_LINKS = [
+  { id: 'linkedin', label: 'LinkedIn', href: '#', Icon: LinkedInIcon },
+  { id: 'instagram', label: 'Instagram', href: '#', Icon: InstagramIcon },
+  { id: 'x', label: 'X', href: '#', Icon: XIcon },
+]
 
 export function Footer() {
   const { t } = useLanguage()
@@ -24,16 +61,14 @@ export function Footer() {
               {t.footer.description}
             </p>
             <div className="mt-1 flex items-center gap-2">
-              {SOCIAL_ICONS.map((icon) => (
+              {SOCIAL_LINKS.map(({ id, label, href, Icon }) => (
                 <a
-                  key={icon}
-                  href="#"
-                  aria-label={icon}
-                  className="glass-surface flex h-4 w-4 items-center justify-center rounded-md"
+                  key={id}
+                  href={href}
+                  aria-label={label}
+                  className="glass-surface flex h-4 w-4 items-center justify-center rounded-md text-on-surface-variant transition-colors hover:text-secondary"
                 >
-                  <svg className="icon-invert h-2 w-2" role="presentation" aria-hidden="true">
-                    <use href={`/icons.svg#${icon}`} />
-                  </svg>
+                  <Icon />
                 </a>
               ))}
             </div>
@@ -45,13 +80,13 @@ export function Footer() {
                 {column.heading}
               </p>
               <nav className="flex flex-col gap-1.5">
-                {column.links.map((link, index) => (
+                {column.links.map((link) => (
                   <a
-                    key={index}
-                    href="#"
+                    key={link.label}
+                    href={link.href}
                     className="text-body-md text-on-surface-variant transition-colors hover:text-secondary"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 ))}
               </nav>

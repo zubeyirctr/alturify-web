@@ -2,85 +2,99 @@ import type { Dictionary } from './en'
 
 export const tr: Dictionary = {
   meta: {
-    title: 'Alturify Intelligence',
-    description: 'Alturify — kurumsal operasyonlar için yapay zeka otomasyonu.',
+    title: 'Alturify — AI Otomasyon Ajansı | İş Süreçlerinizi Otomatikleştirin',
+    description:
+      'Tekrarlayan iş süreçlerinizi yapay zeka ile otomatikleştirin. Süreç otomasyonu, AI asistanlar, entegrasyonlar ve özel çözümler. Ücretsiz analiz görüşmesi ayarlayın.',
   },
   nav: {
     services: 'Hizmetler',
-    about: 'Hakkımızda',
-    blog: 'Blog',
+    howItWorks: 'Nasıl Çalışır',
+    faq: 'SSS',
     contact: 'İletişim',
   },
   header: {
     cta: 'Görüşme Ayarla',
   },
   hero: {
-    headline: 'Lorem ipsum dolor sit amet başlık',
+    headline: 'Elle yürüyen her süreç, otomatikleşmeyi bekliyor',
     subheading:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hero alt başlığı için yer tutucu metin.',
-    ctaPrimary: 'Hemen Başla',
+      'Veri girişinden müşteri iletişimine, raporlamadan onay akışlarına — ekibinizin saatlerini yutan işleri yapay zekaya devredin. Kurulumu biz üstleniyoruz, sonuçları siz ölçüyorsunuz.',
+    ctaPrimary: 'Ücretsiz Analiz Alın',
     ctaSecondary: 'Nasıl Çalışır?',
   },
   problems: {
     badge: 'Problem',
-    heading: 'Lorem ipsum problemler başlığı',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
+    heading: 'Bunlar size tanıdık geliyor mu?',
+    subheading: '',
     items: [
       {
-        title: 'Yer Tutucu Problem Bir',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'Saatler tekrar eden işlere gidiyor',
+        description:
+          'Ekibiniz her gün kopyala-yapıştır, elle veri girişi ve sistemler arası bilgi taşıma ile uğraşıyor. Asıl değer üretecek işlere zaman kalmıyor.',
       },
       {
-        title: 'Yer Tutucu Problem İki',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+        title: 'Küçük hatalar, büyük maliyetler',
+        description:
+          'Manuel süreçlerde gözden kaçan bir satır, yanlış girilen bir rakam; iade, gecikme ve müşteri kaybı olarak geri dönüyor.',
       },
       {
-        title: 'Yer Tutucu Problem Üç',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+        title: 'Büyümek = daha çok insan mı?',
+        description:
+          'İş hacmi arttıkça tek çözüm yeni işe alım gibi görünüyor. Oysa süreçler ölçeklenmedikçe, ekip büyüdükçe karmaşa da büyüyor.',
       },
     ],
   },
   solutions: {
     badge: 'Çözümlerimiz',
-    heading: 'Lorem ipsum çözümler başlığı',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
+    heading: 'Alturify bunu böyle çözüyor',
+    subheading: '',
     items: [
       {
-        title: 'Yer Tutucu Çözüm Bir',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'Uçtan uca otomasyon',
+        description:
+          'Tekrarlayan görevleri yapay zeka destekli akışlara dönüştürüyoruz. Saatler süren işler dakikalara iniyor, ekibiniz stratejik işlere odaklanıyor.',
       },
       {
-        title: 'Yer Tutucu Çözüm İki',
-        description: 'Excepteur sint occaecat cupidatat non proident sunt in culpa.',
+        title: 'Tutarlı ve denetlenebilir',
+        description:
+          'Otomasyonlar aynı işi her seferinde aynı kalitede yapar; her adım kayıt altındadır. Hata oranı düşer, denetim kolaylaşır.',
       },
       {
-        title: 'Yer Tutucu Çözüm Üç',
-        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        title: '10 kat hacim, aynı ekip',
+        description:
+          'İş hacmi arttığında otomasyonlar sizinle birlikte ölçeklenir. Yeni işe alım yerine, mevcut ekibinizin etkisini katlarsınız.',
       },
     ],
   },
   process: {
     badge: 'Nasıl Çalışır',
-    heading: 'Lorem ipsum süreç başlığı',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
+    heading: 'Sizi otomasyona nasıl taşıyoruz',
+    subheading: 'Üç net aşamada, mevcut sürecinizden tam otomasyona geçiyoruz.',
     stages: [
       {
-        label: 'Manuel Süreç',
-        title: 'Yer Tutucu — dağınık, elle yürütülen süreç',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        items: ['Dağınık veri kaynakları', 'Elle veri girişi', 'Tekrarlayan hatalar'],
+        label: 'Mevcut Durum',
+        title: 'Dağınık ve elle yürüyen süreç',
+        description:
+          'Önce mevcut iş akışınızı haritalıyoruz: nerede zaman kaybediliyor, nerede hata doğuyor, hangi adımlar otomasyona uygun.',
+        items: ['Dağınık veri kaynakları', 'Elle veri girişi ve taşıma', 'Tekrarlayan hatalar'],
       },
       {
-        label: 'Dönüşüm',
-        title: 'Yer Tutucu — hat oturmaya başlıyor',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
-        items: ['Akış tanımlanıyor', 'Adımlar bağlanıyor'],
+        label: 'Kurulum',
+        title: 'Akış tasarlanıyor ve bağlanıyor',
+        description:
+          'Süreçlerinizi yapay zeka modelleri ve mevcut araçlarınızla (CRM, ERP, e-posta, tablolar) entegre eden otomasyon hattını kuruyoruz.',
+        items: [
+          'Akış tasarımı ve entegrasyon',
+          'Mevcut araçlarınıza bağlanır',
+          'Gerçek verilerle test',
+        ],
       },
       {
-        label: 'Otomasyon',
-        title: 'Yer Tutucu — temiz, otomatik çıktı',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
-        items: ['Otomatik çıktı', 'Sıfır manuel adım', 'Anlık raporlama'],
+        label: 'Canlı',
+        title: 'Süreç kendi kendine akıyor',
+        description:
+          'Sistem devrede: iş kendiliğinden akıyor, siz sadece sonuçları ve raporları görüyorsunuz. Biz izlemeye ve iyileştirmeye devam ediyoruz.',
+        items: ['7/24 kesintisiz çalışma', 'Sıfır manuel adım', 'Anlık raporlama ve izleme'],
       },
     ],
   },
@@ -88,107 +102,129 @@ export const tr: Dictionary = {
     badge: 'Canlı Sistem',
     live: 'Canlı',
     items: [
-      { value: '%98', label: 'Yer Tutucu — Doğruluk Oranı' },
-      { value: '12b+', label: 'Yer Tutucu — Otomatikleşen Görev' },
-      { value: '4,6/5', label: 'Yer Tutucu — Müşteri Puanı' },
-      { value: '7/24', label: 'Yer Tutucu — İzleme' },
+      { value: '12.400+', label: 'Otomatikleştirilen saat' },
+      { value: '%99,2', label: 'İşlem doğruluğu' },
+      { value: '8x', label: 'Ortalama hızlanma' },
+      { value: '7/24', label: 'Kesintisiz çalışma' },
     ],
   },
   services: {
     badge: 'Hizmetler',
-    heading: 'Lorem ipsum hizmetler başlığı',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
+    heading: 'Neler yapıyoruz',
+    subheading: '',
     linkLabel: 'Detaylı Bilgi',
     items: [
       {
-        title: 'Yer Tutucu Hizmet Bir',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        title: 'Süreç Otomasyonu',
+        description:
+          'Onay akışları, veri aktarımı, faturalama, raporlama gibi tekrarlayan operasyonel süreçleri uçtan uca otomatikleştiriyoruz.',
       },
       {
-        title: 'Yer Tutucu Hizmet İki',
-        description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+        title: 'AI Asistanlar & Chatbotlar',
+        description:
+          'Müşteri sorularını yanıtlayan, randevu alan, sipariş takibi yapan; markanızın dilini konuşan akıllı asistanlar kuruyoruz.',
       },
       {
-        title: 'Yer Tutucu Hizmet Üç',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit.',
+        title: 'Doküman & Veri İşleme',
+        description:
+          'Fatura, sözleşme, form, e-posta... Yapılandırılmamış belgeleri yapay zekayla okuyup sistemlerinize otomatik işliyoruz.',
       },
       {
-        title: 'Yer Tutucu Hizmet Dört',
-        description: 'Excepteur sint occaecat cupidatat non proident sunt in culpa.',
+        title: 'Sistem Entegrasyonları',
+        description:
+          'CRM, ERP, e-ticaret, muhasebe — kopuk çalışan araçlarınızı birbirine bağlıyor, veriyi tek akışta buluşturuyoruz.',
       },
       {
-        title: 'Yer Tutucu Hizmet Beş',
-        description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        title: 'Özel AI Çözümleri',
+        description:
+          'Hazır araçların yetmediği yerde, işinize özel yapay zeka modelleri ve iç araçlar geliştiriyoruz.',
       },
       {
-        title: 'Yer Tutucu Hizmet Altı',
-        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus.',
+        title: 'Otomasyon Danışmanlığı',
+        description:
+          'Nereden başlayacağınızı bilmiyorsanız: süreçlerinizi analiz ediyor, en yüksek getirili otomasyon fırsatlarını yol haritasına döküyoruz.',
       },
     ],
   },
   testimonials: {
     badge: 'Referanslar',
-    heading: 'Lorem ipsum referanslar başlığı',
+    heading: 'Müşterilerimiz ne diyor',
     items: [
       {
-        quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu yorum.',
-        name: 'Yer Tutucu İsim',
-        role: 'Yer Tutucu Unvan, Şirket Bir',
+        quote:
+          'Sipariş işleme süremiz 3 günden 4 saate indi. Ekip artık müşteriyle ilgileniyor, evrakla değil.',
+        name: 'A. Yılmaz',
+        role: 'Operasyon Direktörü, e-ticaret şirketi',
       },
       {
-        quote: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco yer tutucu yorum.',
-        name: 'Yer Tutucu İsim',
-        role: 'Yer Tutucu Unvan, Şirket İki',
+        quote:
+          'İlk ay içinde raporlama tamamen otomatikleşti. Yönetim toplantılarına artık hazır verilerle giriyoruz.',
+        name: 'S. Demir',
+        role: 'Genel Müdür, lojistik firması',
       },
       {
-        quote: 'Duis aute irure dolor in reprehenderit in voluptate yer tutucu yorum.',
-        name: 'Yer Tutucu İsim',
-        role: 'Yer Tutucu Unvan, Şirket Üç',
+        quote:
+          'En etkileyici kısım süreçti: analiz, kurulum, devreye alma — her adımda ne olduğunu bilerek ilerledik.',
+        name: 'M. Kaya',
+        role: 'Kurucu, danışmanlık şirketi',
       },
     ],
   },
   faq: {
     badge: 'SSS',
-    heading: 'Lorem ipsum SSS başlığı',
+    heading: 'Sıkça Sorulan Sorular',
     items: [
       {
-        question: 'Yer tutucu soru bir — lorem ipsum dolor sit amet?',
-        answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu cevap.',
+        question: 'Kurulum ne kadar sürer?',
+        answer:
+          'Kapsama göre değişir: basit bir otomasyon 1-2 hafta içinde canlıya alınabilirken, çok sistemli entegrasyonlar 4-8 hafta sürebilir. İlk görüşmede net bir zaman planı sunuyoruz.',
       },
       {
-        question: 'Yer tutucu soru iki — ut enim ad minim veniam?',
-        answer: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco yer tutucu cevap.',
+        question: 'Mevcut araçlarımla entegre olur mu?',
+        answer:
+          "Büyük olasılıkla evet. CRM, ERP, e-ticaret platformları, muhasebe yazılımları ve iletişim araçlarının çoğuyla çalışıyoruz. API'si olmayan eski sistemler için de alternatif yöntemlerimiz var.",
       },
       {
-        question: 'Yer tutucu soru üç — duis aute irure dolor?',
-        answer: 'Duis aute irure dolor in reprehenderit in voluptate yer tutucu cevap.',
+        question: 'Fiyatlandırma nasıl çalışıyor?',
+        answer:
+          'Proje kapsamına göre teklif hazırlıyoruz. Süreç analizinden sonra sabit fiyatlı bir kurulum + opsiyonel aylık bakım/iyileştirme paketi sunuyoruz. İlk analiz görüşmesi ücretsizdir.',
       },
       {
-        question: 'Yer tutucu soru dört — excepteur sint occaecat?',
-        answer: 'Excepteur sint occaecat cupidatat non proident yer tutucu cevap.',
+        question: 'Verilerimiz güvende mi?',
+        answer:
+          'Evet. Verileriniz sizin sistemlerinizde kalır; otomasyonlar yetkilendirilmiş, şifreli bağlantılar üzerinden çalışır. Talebe göre KVKK/GDPR uyumlu veri işleme sözleşmesi imzalıyoruz.',
       },
       {
-        question: 'Yer tutucu soru beş — sed ut perspiciatis?',
-        answer: 'Sed ut perspiciatis unde omnis iste natus error yer tutucu cevap.',
+        question: 'Teknik ekibimiz yok, sorun olur mu?',
+        answer:
+          'Hayır — zaten çoğu müşterimizin teknik ekibi yok. Kurulumu, bakımı ve izlemeyi biz üstleniyoruz; size sadece sonuç panelleri ve raporlar kalıyor.',
       },
       {
-        question: 'Yer tutucu soru altı — at vero eos et accusamus?',
-        answer: 'At vero eos et accusamus et iusto odio dignissimos yer tutucu cevap.',
+        question: 'Otomasyon işleri elimizden alır mı?',
+        answer:
+          'Amaç insanları değil, angaryayı ortadan kaldırmak. Müşterilerimizde tipik sonuç: aynı ekip, daha yüksek hacim, daha değerli işlere ayrılan zaman.',
       },
     ],
   },
   contact: {
     badge: 'İletişim',
-    heading: 'Lorem ipsum kapanış başlığı',
-    subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
-    scheduleButton: 'Görüşme Ayarla',
+    schedule: {
+      heading: '30 dakikada potansiyeli görün',
+      description:
+        'Size uygun bir tarih ve saat seçin. Görüşmede süreçlerinize bakıp nelerin otomatikleştirilebileceğini birlikte çıkaralım — ücretsiz ve taahhütsüz.',
+    },
     form: {
+      heading: 'Ya da bize yazın',
       name: 'Ad Soyad',
       email: 'E-posta',
       problem: 'Karşılaştığınız sorun',
       expectedSolution: 'Beklediğiniz çözüm',
       submit: 'Gönder',
-      successMessage: 'Teşekkürler — mesajınız gönderildi (yer tutucu, gerçekte iletilmedi).',
+      successMessage: 'Mesajınız bize ulaştı. 24 saat içinde dönüş yapacağız.',
+    },
+    info: {
+      email: 'hello@alturify.com',
+      location: 'İstanbul, Türkiye',
     },
   },
   appointment: {
@@ -205,21 +241,35 @@ export const tr: Dictionary = {
   },
   footer: {
     brand: 'Alturify',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit yer tutucu satır.',
+    description:
+      'Alturify — işletmelerin tekrarlayan süreçlerini yapay zekayla dönüştüren otomasyon ajansı.',
     columns: [
       {
-        heading: 'Yer Tutucu Sütun Bir',
-        links: ['Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link'],
+        heading: 'Şirket',
+        links: [
+          { label: 'Nasıl Çalışır', href: '#how-it-works' },
+          { label: 'Referanslar', href: '#testimonials' },
+          { label: 'SSS', href: '#faq' },
+        ],
       },
       {
-        heading: 'Yer Tutucu Sütun İki',
-        links: ['Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link'],
+        heading: 'Hizmetler',
+        links: [
+          { label: 'Süreç Otomasyonu', href: '#services' },
+          { label: 'AI Asistanlar', href: '#services' },
+          { label: 'Entegrasyonlar', href: '#services' },
+          { label: 'Danışmanlık', href: '#services' },
+        ],
       },
       {
-        heading: 'Yer Tutucu Sütun Üç',
-        links: ['Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link', 'Yer Tutucu Link'],
+        heading: 'İletişim',
+        links: [
+          { label: 'Görüşme Ayarla', href: '#contact' },
+          { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
+          { label: 'LinkedIn', href: '#' },
+        ],
       },
     ],
-    copyright: 'Alturify Intelligence',
+    copyright: 'Alturify',
   },
 }
