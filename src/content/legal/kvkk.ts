@@ -18,7 +18,7 @@ export const kvkk: LegalDocumentByLanguage = {
           'Unvan: [ŞİRKET UNVANI GİRİNİZ]',
           'Adres: [ŞİRKET ADRESİ GİRİNİZ]',
           'Mersis No: [MERSİS NO GİRİNİZ]',
-          'E-posta: hello@alturify.com',
+          'E-posta: info@alturify.com',
         ],
       },
       {
@@ -58,7 +58,7 @@ export const kvkk: LegalDocumentByLanguage = {
       {
         heading: '6. Başvuru Yöntemi',
         paragraphs: [
-          'Yukarıda sayılan haklarınıza ilişkin taleplerinizi, kimliğinizi tevsik edici bilgilerle birlikte hello@alturify.com adresine e-posta yoluyla iletebilirsiniz. Başvurunuz, talebin niteliğine göre en kısa sürede ve en geç KVKK\'nın öngördüğü otuz (30) gün içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu\'nca belirlenen tarifedeki ücret talep edilebilir.',
+          'Yukarıda sayılan haklarınıza ilişkin taleplerinizi, kimliğinizi tevsik edici bilgilerle birlikte info@alturify.com adresine e-posta yoluyla iletebilirsiniz. Başvurunuz, talebin niteliğine göre en kısa sürede ve en geç KVKK\'nın öngördüğü otuz (30) gün içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu\'nca belirlenen tarifedeki ücret talep edilebilir.',
         ],
       },
     ],
@@ -82,7 +82,7 @@ export const kvkk: LegalDocumentByLanguage = {
           'Legal name: [ENTER LEGAL COMPANY NAME]',
           'Address: [ENTER COMPANY ADDRESS]',
           'Trade Registry (Mersis) No: [ENTER MERSIS NUMBER]',
-          'Email: hello@alturify.com',
+          'Email: info@alturify.com',
         ],
       },
       {
@@ -122,7 +122,7 @@ export const kvkk: LegalDocumentByLanguage = {
       {
         heading: '6. How to Apply',
         paragraphs: [
-          'You may submit requests regarding the rights above, together with information verifying your identity, by email to hello@alturify.com. Your request will be resolved free of charge as soon as possible and, at the latest, within thirty (30) days as required by KVKK; a fee set by the Turkish Data Protection Board may apply if the request requires additional cost.',
+          'You may submit requests regarding the rights above, together with information verifying your identity, by email to info@alturify.com. Your request will be resolved free of charge as soon as possible and, at the latest, within thirty (30) days as required by KVKK; a fee set by the Turkish Data Protection Board may apply if the request requires additional cost.',
         ],
       },
     ],

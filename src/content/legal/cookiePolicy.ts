@@ -45,7 +45,7 @@ export const cookiePolicy: LegalDocumentByLanguage = {
       },
       {
         heading: '6. İletişim',
-        paragraphs: ['Sorularınız için hello@alturify.com adresinden bize ulaşabilirsiniz.'],
+        paragraphs: ['Sorularınız için info@alturify.com adresinden bize ulaşabilirsiniz.'],
       },
     ],
   },
@@ -88,7 +88,7 @@ export const cookiePolicy: LegalDocumentByLanguage = {
       },
       {
         heading: '6. Contact',
-        paragraphs: ['If you have questions, contact us at hello@alturify.com.'],
+        paragraphs: ['If you have questions, contact us at info@alturify.com.'],
       },
     ],
   },

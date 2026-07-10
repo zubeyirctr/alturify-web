@@ -24,7 +24,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
         list: [
           'Unvan: [ŞİRKET UNVANI GİRİNİZ]',
           'Adres: [ŞİRKET ADRESİ GİRİNİZ]',
-          'E-posta: hello@alturify.com',
+          'E-posta: info@alturify.com',
         ],
       },
       {
@@ -102,7 +102,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
       {
         heading: '11. Başvuru Yöntemi',
         paragraphs: [
-          'Yukarıdaki haklarınızı kullanmak için taleplerinizi hello@alturify.com adresine e-posta yoluyla iletebilirsiniz. Talebiniz, niteliğine göre en kısa sürede ve en geç yasal azami süre içinde ücretsiz olarak sonuçlandırılır.',
+          'Yukarıdaki haklarınızı kullanmak için taleplerinizi info@alturify.com adresine e-posta yoluyla iletebilirsiniz. Talebiniz, niteliğine göre en kısa sürede ve en geç yasal azami süre içinde ücretsiz olarak sonuçlandırılır.',
         ],
       },
       {
@@ -113,7 +113,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
       },
       {
         heading: '13. İletişim',
-        paragraphs: ['Sorularınız için bize hello@alturify.com adresinden ulaşabilirsiniz.'],
+        paragraphs: ['Sorularınız için bize info@alturify.com adresinden ulaşabilirsiniz.'],
       },
     ],
   },
@@ -136,7 +136,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
         list: [
           'Legal name: [ENTER LEGAL COMPANY NAME]',
           'Address: [ENTER COMPANY ADDRESS]',
-          'Email: hello@alturify.com',
+          'Email: info@alturify.com',
         ],
       },
       {
@@ -212,7 +212,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
       {
         heading: '11. How to Exercise Your Rights',
         paragraphs: [
-          'You can exercise the rights above by emailing your request to hello@alturify.com. We will respond as soon as possible and, at the latest, within the maximum period required by applicable law, free of charge.',
+          'You can exercise the rights above by emailing your request to info@alturify.com. We will respond as soon as possible and, at the latest, within the maximum period required by applicable law, free of charge.',
         ],
       },
       {
@@ -223,7 +223,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
       },
       {
         heading: '13. Contact',
-        paragraphs: ['If you have any questions, contact us at hello@alturify.com.'],
+        paragraphs: ['If you have any questions, contact us at info@alturify.com.'],
       },
     ],
   },

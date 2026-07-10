@@ -237,7 +237,7 @@ export const en = {
       },
     },
     info: {
-      email: 'hello@alturify.com',
+      email: 'info@alturify.com',
       location: 'Istanbul, Turkey',
     },
   },
@@ -279,7 +279,7 @@ export const en = {
         heading: 'Contact',
         links: [
           { label: 'Book a Call', href: '#contact' },
-          { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
+          { label: 'info@alturify.com', href: 'mailto:info@alturify.com' },
           { label: 'LinkedIn', href: '#' },
         ],
       },

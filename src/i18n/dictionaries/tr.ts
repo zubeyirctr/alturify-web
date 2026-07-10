@@ -239,7 +239,7 @@ export const tr: Dictionary = {
       },
     },
     info: {
-      email: 'hello@alturify.com',
+      email: 'info@alturify.com',
       location: 'İstanbul, Türkiye',
     },
   },
@@ -281,7 +281,7 @@ export const tr: Dictionary = {
         heading: 'İletişim',
         links: [
           { label: 'Görüşme Ayarla', href: '#contact' },
-          { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
+          { label: 'info@alturify.com', href: 'mailto:info@alturify.com' },
           { label: 'LinkedIn', href: '#' },
         ],
       },

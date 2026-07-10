@@ -66,7 +66,7 @@ export const termsOfService: LegalDocumentByLanguage = {
       },
       {
         heading: '9. İletişim',
-        paragraphs: ['Bu Şartlarla ilgili sorularınız için hello@alturify.com adresinden bize ulaşabilirsiniz.'],
+        paragraphs: ['Bu Şartlarla ilgili sorularınız için info@alturify.com adresinden bize ulaşabilirsiniz.'],
       },
     ],
   },
@@ -131,7 +131,7 @@ export const termsOfService: LegalDocumentByLanguage = {
       },
       {
         heading: '9. Contact',
-        paragraphs: ['If you have questions about these Terms, contact us at hello@alturify.com.'],
+        paragraphs: ['If you have questions about these Terms, contact us at info@alturify.com.'],
       },
     ],
   },
