@@ -219,6 +219,11 @@ export const en = {
       expectedSolution: 'The solution you expect',
       submit: 'Send',
       successMessage: "Message received — we reply within 24 hours.",
+      errors: {
+        required: 'This field is required.',
+        invalidEmail: 'Enter a valid email address.',
+        tooLong: 'This field is too long.',
+      },
     },
     info: {
       email: 'hello@alturify.com',

@@ -221,6 +221,11 @@ export const tr: Dictionary = {
       expectedSolution: 'Beklediğiniz çözüm',
       submit: 'Gönder',
       successMessage: 'Mesajınız bize ulaştı — 24 saat içinde dönüş yapıyoruz.',
+      errors: {
+        required: 'Bu alan zorunludur.',
+        invalidEmail: 'Geçerli bir e-posta adresi girin.',
+        tooLong: 'Bu alan çok uzun.',
+      },
     },
     info: {
       email: 'hello@alturify.com',

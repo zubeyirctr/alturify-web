@@ -1,4 +1,4 @@
-import { useState, type FormEvent, type ReactNode } from 'react'
+import { useRef, useState, type FormEvent, type ReactNode } from 'react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
@@ -7,14 +7,32 @@ import { Textarea } from '@/components/ui/Textarea'
 import { FadeInView } from '@/components/motion/Reveal'
 import { ScheduleWidget } from '@/components/sections/ScheduleWidget'
 import { useLanguage } from '@/i18n/LanguageContext'
+import {
+  CONTACT_FIELD_LIMITS,
+  HONEYPOT_FIELD_NAME,
+  isLikelySpam,
+  sanitizeText,
+  validateContactForm,
+  type ContactFieldErrors,
+  type ContactFormValues,
+} from '@/lib/contact-form'
 
-function Field({ label, children }: { label: string; children: ReactNode }) {
+function Field({
+  label,
+  error,
+  children,
+}: {
+  label: string
+  error?: string
+  children: ReactNode
+}) {
   return (
     <label className="flex flex-col gap-1">
       <span className="font-tech text-label-caps uppercase tracking-[0.1em] text-on-surface-variant">
         {label}
       </span>
       {children}
+      {error ? <span className="text-body-md text-error">{error}</span> : null}
     </label>
   )
 }
@@ -22,13 +40,47 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 export function ContactSection() {
   const { t } = useLanguage()
   const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState<ContactFieldErrors>({})
+  const mountedAt = useRef(Date.now())
+
+  const errorMessages = t.contact.form.errors
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const data = Object.fromEntries(new FormData(event.currentTarget))
-    console.log('Contact form submitted (placeholder — no backend):', data)
+    const form = event.currentTarget
+    const formData = new FormData(form)
+
+    // Bots that fill the honeypot or submit implausibly fast are shown a fake
+    // success so they don't learn to route around the check.
+    if (isLikelySpam(formData, mountedAt.current)) {
+      setSubmitted(true)
+      form.reset()
+      return
+    }
+
+    const values: ContactFormValues = {
+      name: sanitizeText(String(formData.get('name') ?? '')),
+      email: sanitizeText(String(formData.get('email') ?? '')),
+      problem: sanitizeText(String(formData.get('problem') ?? '')),
+      expectedSolution: sanitizeText(String(formData.get('expectedSolution') ?? '')),
+    }
+
+    const validationErrors = validateContactForm(values)
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors)
+      return
+    }
+    setErrors({})
+
+    // TODO(backend): once a real endpoint exists, POST `values` there instead
+    // of logging — add server-side validation, CSRF protection, and rate
+    // limiting there too, since none of the client-side checks above can be
+    // trusted once a request can be sent directly to the API.
+    if (import.meta.env.DEV) {
+      console.log('Contact form submitted (placeholder — no backend):', values)
+    }
     setSubmitted(true)
-    event.currentTarget.reset()
+    form.reset()
   }
 
   return (
@@ -51,19 +103,44 @@ export function ContactSection() {
             {submitted ? (
               <p className="text-body-md text-on-background">{t.contact.form.successMessage}</p>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
                 <h3 className="text-headline-md text-on-background">{t.contact.form.heading}</h3>
-                <Field label={t.contact.form.name}>
-                  <Input name="name" required />
+
+                {/* Honeypot: hidden from real users, invisible to screen readers, but
+                    still present in the DOM so form-filling bots tend to fill it in. */}
+                <label
+                  aria-hidden="true"
+                  className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden"
+                  tabIndex={-1}
+                >
+                  Bırakınız / Leave blank
+                  <input
+                    type="text"
+                    name={HONEYPOT_FIELD_NAME}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </label>
+
+                <Field label={t.contact.form.name} error={errors.name && errorMessages[errors.name]}>
+                  <Input name="name" required maxLength={CONTACT_FIELD_LIMITS.name} />
                 </Field>
-                <Field label={t.contact.form.email}>
-                  <Input name="email" type="email" required />
+                <Field label={t.contact.form.email} error={errors.email && errorMessages[errors.email]}>
+                  <Input name="email" type="email" required maxLength={CONTACT_FIELD_LIMITS.email} />
                 </Field>
-                <Field label={t.contact.form.problem}>
-                  <Textarea name="problem" rows={2} required />
+                <Field label={t.contact.form.problem} error={errors.problem && errorMessages[errors.problem]}>
+                  <Textarea name="problem" rows={2} required maxLength={CONTACT_FIELD_LIMITS.problem} />
                 </Field>
-                <Field label={t.contact.form.expectedSolution}>
-                  <Textarea name="expectedSolution" rows={2} required />
+                <Field
+                  label={t.contact.form.expectedSolution}
+                  error={errors.expectedSolution && errorMessages[errors.expectedSolution]}
+                >
+                  <Textarea
+                    name="expectedSolution"
+                    rows={2}
+                    required
+                    maxLength={CONTACT_FIELD_LIMITS.expectedSolution}
+                  />
                 </Field>
                 <Button type="submit" variant="primary" size="md" className="mt-1">
                   {t.contact.form.submit}

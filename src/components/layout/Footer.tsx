@@ -66,6 +66,8 @@ export function Footer() {
                   key={id}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="glass-surface flex h-4 w-4 items-center justify-center rounded-md text-on-surface-variant transition-colors hover:text-secondary"
                 >
                   <Icon />
