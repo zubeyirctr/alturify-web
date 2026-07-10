@@ -4,6 +4,10 @@ import { ParticleNetwork } from '@/components/effects/ParticleNetwork'
 import { AutomationLoop } from '@/components/effects/AutomationLoop'
 import { useLanguage } from '@/i18n/LanguageContext'
 
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export function HeroSection() {
   const { t } = useLanguage()
 
@@ -26,10 +30,10 @@ export function HeroSection() {
           </p>
         </RevealItem>
         <RevealItem className="mt-2 flex flex-wrap items-center justify-center gap-1.5">
-          <Button variant="primary" size="lg">
+          <Button variant="primary" size="lg" onClick={() => scrollToSection('contact')}>
             {t.hero.ctaPrimary}
           </Button>
-          <Button variant="secondary" size="lg">
+          <Button variant="secondary" size="lg" onClick={() => scrollToSection('how-it-works')}>
             {t.hero.ctaSecondary}
           </Button>
         </RevealItem>

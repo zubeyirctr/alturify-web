@@ -25,9 +25,9 @@ export const en = {
     reject: 'Reject',
   },
   hero: {
-    headline: 'Your team thinks. The rest is automatic.',
+    headline: 'Our team builds the strategy. AI runs the operations.',
     subheading:
-      "Data entry, reporting, customer correspondence, approval flows — we hand your company's invisible workload to AI. Your first automation goes live in days, not weeks.",
+      "We go beyond data entry and reporting. From automating your industry's workflows to e-commerce, we build solutions tailored to your niche. We connect every department and digital tool you use to put your operations on autopilot. Your transformation starts in days.",
     ctaPrimary: 'Free Process Audit',
     ctaSecondary: 'How It Works',
   },
@@ -71,7 +71,7 @@ export const en = {
       {
         title: 'AI that joins your team',
         description:
-          "We don't sell a tool and leave. We learn your processes, operate the automations, and report measurable improvement every month.",
+          'Instead of setting up systems and walking away, we become part of your business. We continuously analyze your processes, optimize the AI integrations, and regularly report the measurable efficiency we deliver.',
       },
     ],
   },
@@ -250,7 +250,7 @@ export const en = {
     confirmButton: 'Confirm Appointment',
     changeButton: 'Change',
     successTitle: 'Your appointment is booked',
-    successMessage: 'This is a placeholder confirmation — no real booking has been made yet.',
+    successMessage: "Your request has been received. We'll get back to you shortly to confirm your selected date and time.",
     closeButton: 'Close',
   },
   footer: {
@@ -280,7 +280,6 @@ export const en = {
         links: [
           { label: 'Book a Call', href: '#contact' },
           { label: 'info@alturify.com', href: 'mailto:info@alturify.com' },
-          { label: 'LinkedIn', href: '#' },
         ],
       },
       {

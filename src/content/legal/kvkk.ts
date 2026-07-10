@@ -1,7 +1,8 @@
 // DRAFT — standard boilerplate only, modeled on the Turkish Data Protection
 // Authority's (KVKK) disclosure notice format. Must be reviewed and approved
-// by a qualified lawyer before publish. Company identity fields are
-// placeholders and need real data filled in.
+// by a qualified lawyer before publish. The Veri Sorumlusu section
+// intentionally lists only a contact email for now — add legal name/address/
+// Mersis number once the company is registered.
 import type { LegalDocumentByLanguage } from './types'
 
 export const kvkk: LegalDocumentByLanguage = {
@@ -14,12 +15,7 @@ export const kvkk: LegalDocumentByLanguage = {
         paragraphs: [
           '6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz veri sorumlusu sıfatıyla aşağıda kimlik bilgileri yer alan Alturify tarafından bu aydınlatma metninde açıklanan kapsamda işlenmektedir:',
         ],
-        list: [
-          'Unvan: [ŞİRKET UNVANI GİRİNİZ]',
-          'Adres: [ŞİRKET ADRESİ GİRİNİZ]',
-          'Mersis No: [MERSİS NO GİRİNİZ]',
-          'E-posta: info@alturify.com',
-        ],
+        list: ['E-posta: info@alturify.com'],
       },
       {
         heading: '2. Kişisel Verilerin Hangi Amaçla İşleneceği',
@@ -78,12 +74,7 @@ export const kvkk: LegalDocumentByLanguage = {
         paragraphs: [
           'Under KVKK, your personal data is processed, as described in this notice, by Alturify acting as data controller:',
         ],
-        list: [
-          'Legal name: [ENTER LEGAL COMPANY NAME]',
-          'Address: [ENTER COMPANY ADDRESS]',
-          'Trade Registry (Mersis) No: [ENTER MERSIS NUMBER]',
-          'Email: info@alturify.com',
-        ],
+        list: ['Email: info@alturify.com'],
       },
       {
         heading: '2. Purpose of Processing',

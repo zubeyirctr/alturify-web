@@ -27,9 +27,9 @@ export const tr: Dictionary = {
     reject: 'Reddet',
   },
   hero: {
-    headline: 'Ekibiniz düşünsün. Gerisi otomatik.',
+    headline: 'Stratejiyi ekibimiz kursun, operasyonu yapay zeka yönetsin.',
     subheading:
-      'Veri girişi, raporlama, müşteri yazışmaları, onay akışları — şirketinizin görünmez iş yükünü yapay zekaya devrediyoruz. İlk otomasyonunuz haftalar değil, günler içinde canlıda.',
+      'Veri girişi ve raporlamanın ötesine geçiyoruz. Sektörün iş akışlarının otomasyonundan e-ticarete kadar her nişe özel çözümler üretiyoruz. Tüm departmanlarınızı ve dijital araçlarınızı birbirine bağlayarak operasyonunuzu otopilota alıyoruz. Dönüşümünüz günler içinde başlıyor.',
     ctaPrimary: 'Ücretsiz Süreç Analizi',
     ctaSecondary: 'Nasıl Çalışır?',
   },
@@ -73,7 +73,7 @@ export const tr: Dictionary = {
       {
         title: 'Ekibinize katılan yapay zeka',
         description:
-          'Araç satıp gitmiyoruz. Süreçlerinizi öğreniyor, otomasyonları işletiyor ve her ay ölçülebilir iyileştirme raporluyoruz.',
+          'Sistemleri kurup gitmek yerine, işinizin bir parçası oluyoruz. Süreçlerinizi sürekli analiz ediyor, yapay zeka entegrasyonlarını optimize ediyor ve işletmenize sağladığımız ölçülebilir verimliliği düzenli olarak raporluyoruz.',
       },
     ],
   },
@@ -252,7 +252,7 @@ export const tr: Dictionary = {
     confirmButton: 'Randevuyu Onayla',
     changeButton: 'Değiştir',
     successTitle: 'Randevunuz alındı',
-    successMessage: 'Bu yer tutucu bir onaydır — henüz gerçek bir randevu oluşturulmadı.',
+    successMessage: 'Talebiniz alındı. Seçtiğiniz tarih ve saat için en kısa sürede size dönüş yapacağız.',
     closeButton: 'Kapat',
   },
   footer: {
@@ -282,7 +282,6 @@ export const tr: Dictionary = {
         links: [
           { label: 'Görüşme Ayarla', href: '#contact' },
           { label: 'info@alturify.com', href: 'mailto:info@alturify.com' },
-          { label: 'LinkedIn', href: '#' },
         ],
       },
       {

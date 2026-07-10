@@ -1,7 +1,7 @@
 // DRAFT — standard boilerplate only. Must be reviewed and approved by a
 // qualified lawyer before this is treated as the company's real privacy
-// policy. Company identity fields (legal name, address, registry number)
-// are placeholders and need to be filled in with real data before publish.
+// policy. The Data Controller section intentionally lists only a contact
+// email for now — add legal name/address/registry number once registered.
 import type { LegalDocumentByLanguage } from './types'
 
 export const privacyPolicy: LegalDocumentByLanguage = {
@@ -21,11 +21,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
         paragraphs: [
           'Kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve ilgili mevzuat kapsamında veri sorumlusu sıfatıyla aşağıdaki bilgilere sahip şirket tarafından işlenmektedir:',
         ],
-        list: [
-          'Unvan: [ŞİRKET UNVANI GİRİNİZ]',
-          'Adres: [ŞİRKET ADRESİ GİRİNİZ]',
-          'E-posta: info@alturify.com',
-        ],
+        list: ['E-posta: info@alturify.com'],
       },
       {
         heading: '3. Toplanan Kişisel Veriler',
@@ -133,11 +129,7 @@ export const privacyPolicy: LegalDocumentByLanguage = {
         paragraphs: [
           'Your personal data is processed by the following company acting as data controller under Turkey\'s Law on the Protection of Personal Data No. 6698 ("KVKK") and, where applicable, the EU General Data Protection Regulation ("GDPR"):',
         ],
-        list: [
-          'Legal name: [ENTER LEGAL COMPANY NAME]',
-          'Address: [ENTER COMPANY ADDRESS]',
-          'Email: info@alturify.com',
-        ],
+        list: ['Email: info@alturify.com'],
       },
       {
         heading: '3. Personal Data We Collect',
