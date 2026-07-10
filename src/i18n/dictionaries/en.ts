@@ -292,7 +292,7 @@ export const en = {
         ],
       },
     ],
-    copyright: 'Alturify',
+    copyright: 'Alturify. All rights reserved.',
   },
 }
 

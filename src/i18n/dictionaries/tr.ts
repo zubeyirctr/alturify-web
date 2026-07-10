@@ -294,6 +294,6 @@ export const tr: Dictionary = {
         ],
       },
     ],
-    copyright: 'Alturify',
+    copyright: 'Alturify. Tüm hakları saklıdır.',
   },
 }
