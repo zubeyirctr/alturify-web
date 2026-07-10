@@ -1,8 +1,8 @@
 export const en = {
   meta: {
-    title: 'Alturify — AI Automation Agency | Automate Your Business Processes',
+    title: 'Alturify — AI Automation Agency | Operations That Run Themselves',
     description:
-      'Automate your repetitive business processes with AI. Process automation, AI assistants, integrations, and custom solutions. Book a free assessment call.',
+      "Hand your company's invisible workload to AI — from data entry to reporting. Book a free process audit; your first automation goes live in days.",
   },
   nav: {
     services: 'Services',
@@ -14,53 +14,53 @@ export const en = {
     cta: 'Book a Call',
   },
   hero: {
-    headline: 'Every manual process is waiting to be automated',
+    headline: 'Your team thinks. The rest is automatic.',
     subheading:
-      "From data entry to customer communication, reporting to approval flows — hand your team's most time-consuming work to AI. We handle the setup; you measure the results.",
-    ctaPrimary: 'Get a Free Assessment',
+      "Data entry, reporting, customer correspondence, approval flows — we hand your company's invisible workload to AI. Your first automation goes live in days, not weeks.",
+    ctaPrimary: 'Free Process Audit',
     ctaSecondary: 'How It Works',
   },
   problems: {
     badge: 'The Problem',
-    heading: 'Does any of this sound familiar?',
+    heading: 'The silent cost of every growing company',
     subheading: '',
     items: [
       {
-        title: 'Hours lost to repetitive work',
+        title: 'The invisible workload',
         description:
-          'Your team spends every day copy-pasting, entering data by hand, and shuttling information between systems — leaving no time for work that actually creates value.',
+          "40% of your team's day dissolves into copy-paste, data shuttling, and routine correspondence. That time shows up in no report — but it shows up on payroll.",
       },
       {
-        title: 'Small errors, big costs',
+        title: 'Errors compound',
         description:
-          'In manual processes, one missed line or mistyped figure comes back as refunds, delays, and lost customers.',
+          'Every step of a manual process is a chance for error. One mistyped figure compounds into refunds, delays, and lost trust.',
       },
       {
-        title: 'Does growing mean hiring more?',
+        title: 'The growth bottleneck',
         description:
-          "As volume grows, hiring feels like the only answer. But unless your processes scale, a bigger team just means bigger chaos.",
+          "If doubling your volume doubles your workload, it's your effort scaling — not your processes. That's unsustainable.",
       },
     ],
   },
   solutions: {
     badge: 'Our Solutions',
-    heading: "Here's how Alturify solves it",
+    heading: 'The Alturify difference',
     subheading: '',
     items: [
       {
-        title: 'End-to-end automation',
+        title: 'Live in days',
         description:
-          'We turn repetitive tasks into AI-powered workflows. Hours become minutes, and your team gets back to strategic work.',
+          'No months-long transformation projects: we pick the highest-impact process, build it, and ship it in days. See the value first, then expand.',
       },
       {
-        title: 'Consistent and auditable',
+        title: 'With enterprise discipline',
         description:
-          'Automations do the same job at the same quality every time, with every step logged. Error rates drop; auditing gets easy.',
+          "Every automation is logged, tested, and monitored. If a step fails, you know — silently broken processes don't exist here.",
       },
       {
-        title: '10x the volume, same team',
+        title: 'AI that joins your team',
         description:
-          'When volume grows, automations scale with you. Instead of new hires, you multiply the impact of the team you already have.',
+          "We don't sell a tool and leave. We learn your processes, operate the automations, and report measurable improvement every month.",
       },
     ],
   },
@@ -70,29 +70,29 @@ export const en = {
     subheading: 'In three clear stages, we take you from your current process to full automation.',
     stages: [
       {
-        label: 'Current State',
-        title: 'Scattered, manual process',
+        label: '01 — DISCOVERY',
+        title: 'We map your processes',
         description:
-          'First we map your current workflow: where time is lost, where errors are born, and which steps are ripe for automation.',
-        items: ['Scattered data sources', 'Manual data entry and transfer', 'Recurring errors'],
+          'In a free audit we map your workflow end to end: where time is lost, where errors are born, and which automation delivers the highest return.',
+        items: ['End-to-end process map', 'Time & cost analysis', 'Prioritized opportunity list'],
       },
       {
-        label: 'Build',
-        title: 'The flow is designed and connected',
+        label: '02 — BUILD',
+        title: 'We build the automation',
         description:
-          'We build the automation pipeline that connects AI models with your existing tools — CRM, ERP, email, spreadsheets.',
+          "We connect AI models to your existing tools — CRM, ERP, email, spreadsheets — test on your real data, and go live with your sign-off.",
         items: [
-          'Flow design and integration',
-          'Connects to your existing tools',
+          'Integrates with your stack',
           'Tested on real data',
+          'Approved, gradual rollout',
         ],
       },
       {
-        label: 'Live',
-        title: 'The process runs itself',
+        label: '03 — OPERATE',
+        title: 'The system runs, we watch',
         description:
-          'The system is live: work flows on its own while you watch the results and reports. We keep monitoring and improving.',
-        items: ['Runs 24/7', 'Zero manual steps', 'Real-time reporting and monitoring'],
+          'While automation runs 24/7, we monitor performance, handle exceptions, and return each month with improvements. You only see the results.',
+        items: ['24/7 monitoring & response', 'Monthly improvement report', 'Measurable results dashboard'],
       },
     ],
   },
@@ -100,47 +100,47 @@ export const en = {
     badge: 'Live System',
     live: 'Live',
     items: [
-      { value: '12,400+', label: 'Hours automated' },
+      { value: '12,400+', label: 'Work hours automated' },
       { value: '99.2%', label: 'Process accuracy' },
-      { value: '8x', label: 'Average speed-up' },
+      { value: '8x', label: 'Average process speed-up' },
       { value: '24/7', label: 'Always-on operation' },
     ],
   },
   services: {
     badge: 'Services',
-    heading: 'What we do',
+    heading: "What we're best at",
     subheading: '',
     linkLabel: 'Learn More',
     items: [
       {
         title: 'Process Automation',
         description:
-          'We automate repetitive operational processes end to end: approval flows, data transfer, invoicing, reporting.',
+          'Approval flows, invoicing, order processing, reporting — we automate the processes that form your operational backbone, end to end.',
       },
       {
         title: 'AI Assistants & Chatbots',
         description:
-          "We build intelligent assistants that answer customers, book appointments, and track orders — in your brand's voice.",
+          "Assistants that answer customers, manage bookings and orders, and speak your brand's language — on web, WhatsApp, and email.",
       },
       {
         title: 'Document & Data Processing',
         description:
-          'Invoices, contracts, forms, emails... We use AI to read unstructured documents and feed them into your systems automatically.',
+          'Invoices, contracts, forms, emails: AI reads, validates, and posts unstructured documents into your systems in seconds.',
       },
       {
         title: 'System Integrations',
         description:
-          'CRM, ERP, e-commerce, accounting — we connect your siloed tools and unify data into a single flow.',
+          'CRM, ERP, e-commerce, accounting — we unify your disconnected tools into a single data flow. Double entry and sync issues become history.',
       },
       {
         title: 'Custom AI Solutions',
         description:
-          'Where off-the-shelf tools fall short, we build AI models and internal tools tailored to your business.',
+          'We start where off-the-shelf tools end: custom models, internal tools, and decision-support systems built for your business.',
       },
       {
         title: 'Automation Consulting',
         description:
-          "Not sure where to start? We analyze your processes and map the highest-ROI automation opportunities into a roadmap.",
+          'A clear picture before you invest: process analysis, ROI math, and a prioritized roadmap — built on numbers, not assumptions.',
       },
     ],
   },
@@ -173,52 +173,52 @@ export const en = {
     heading: 'Frequently Asked Questions',
     items: [
       {
-        question: 'How long does setup take?',
+        question: 'How fast does the first automation go live?',
         answer:
-          'It depends on scope: a simple automation can go live in 1–2 weeks, while multi-system integrations may take 4–8 weeks. You get a clear timeline in the first call.',
+          'Typically 1–3 weeks after the discovery call. Simple flows ship in days; multi-system integrations take 4–8 weeks. We commit to a clear timeline in the first call.',
       },
       {
-        question: 'Will it integrate with my existing tools?',
+        question: 'Will it integrate with our existing tools?',
         answer:
-          'Almost certainly. We work with most CRMs, ERPs, e-commerce platforms, accounting software, and communication tools. For legacy systems without APIs, we have alternative approaches.',
+          "Almost always yes. We've worked with nearly every common CRM, ERP, e-commerce, and accounting tool. For legacy systems without APIs, we have proven alternatives.",
       },
       {
         question: 'How does pricing work?',
         answer:
-          'We quote per project scope. After the process analysis, we offer a fixed-price build plus an optional monthly maintenance/improvement plan. The initial assessment call is free.',
+          'After the free process audit you receive a fixed-price build quote — no surprise costs. You can continue with an optional monthly operate/improve plan.',
       },
       {
         question: 'Is our data safe?',
         answer:
-          'Yes. Your data stays in your systems; automations run over authorized, encrypted connections. We sign GDPR/KVKK-compliant data processing agreements on request.',
+          'Your data stays in your systems; automations run only over authorized, encrypted connections. We operate GDPR/KVKK-compliant and sign data processing agreements on request.',
       },
       {
-        question: "We don't have a technical team — is that a problem?",
+        question: 'We have no technical team — is that a problem?',
         answer:
-          "Not at all — most of our clients don't. We handle setup, maintenance, and monitoring; all you see are dashboards and results.",
+          "Most of our clients don't. Build, maintenance, and monitoring are fully on us; nothing on your side requires technical knowledge.",
       },
       {
-        question: 'Will automation replace our jobs?',
+        question: 'What if an automation breaks?',
         answer:
-          'The goal is to eliminate drudgery, not people. The typical outcome for our clients: same team, higher volume, more time for meaningful work.',
+          'Every automation ships with monitoring and alerting. We know before you do, and for critical flows we commit to defined response times.',
       },
     ],
   },
   contact: {
     badge: 'Contact',
     schedule: {
-      heading: 'See the potential in 30 minutes',
+      heading: 'A 30-minute discovery call',
       description:
-        "Pick a date and time that works for you. On the call, we'll look at your processes and map what can be automated — free, no strings attached.",
+        "Pick a time that suits you. On the call we'll walk through your processes together and pinpoint the best automation candidates and their estimated return — free, no commitment.",
     },
     form: {
-      heading: 'Or drop us a line',
+      heading: 'Or write to us',
       name: 'Full Name',
       email: 'Email',
       problem: 'The problem you are facing',
       expectedSolution: 'The solution you expect',
       submit: 'Send',
-      successMessage: "We've received your message. We'll get back to you within 24 hours.",
+      successMessage: "Message received — we reply within 24 hours.",
     },
     info: {
       email: 'hello@alturify.com',
@@ -240,7 +240,7 @@ export const en = {
   footer: {
     brand: 'Alturify',
     description:
-      'Alturify — the automation agency turning repetitive business processes into intelligent workflows.',
+      "Alturify — the automation agency rebuilding growing companies' operations with AI.",
     columns: [
       {
         heading: 'Company',

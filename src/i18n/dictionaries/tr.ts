@@ -2,9 +2,9 @@ import type { Dictionary } from './en'
 
 export const tr: Dictionary = {
   meta: {
-    title: 'Alturify — AI Otomasyon Ajansı | İş Süreçlerinizi Otomatikleştirin',
+    title: 'Alturify — AI Otomasyon Ajansı | Operasyonunuz Kendi Kendine Çalışsın',
     description:
-      'Tekrarlayan iş süreçlerinizi yapay zeka ile otomatikleştirin. Süreç otomasyonu, AI asistanlar, entegrasyonlar ve özel çözümler. Ücretsiz analiz görüşmesi ayarlayın.',
+      'Veri girişinden raporlamaya, şirketinizin görünmez iş yükünü yapay zekaya devredin. Ücretsiz süreç analizi ile ilk otomasyonunuz günler içinde canlıda.',
   },
   nav: {
     services: 'Hizmetler',
@@ -16,53 +16,53 @@ export const tr: Dictionary = {
     cta: 'Görüşme Ayarla',
   },
   hero: {
-    headline: 'Elle yürüyen her süreç, otomatikleşmeyi bekliyor',
+    headline: 'Ekibiniz düşünsün. Gerisi otomatik.',
     subheading:
-      'Veri girişinden müşteri iletişimine, raporlamadan onay akışlarına — ekibinizin saatlerini yutan işleri yapay zekaya devredin. Kurulumu biz üstleniyoruz, sonuçları siz ölçüyorsunuz.',
-    ctaPrimary: 'Ücretsiz Analiz Alın',
+      'Veri girişi, raporlama, müşteri yazışmaları, onay akışları — şirketinizin görünmez iş yükünü yapay zekaya devrediyoruz. İlk otomasyonunuz haftalar değil, günler içinde canlıda.',
+    ctaPrimary: 'Ücretsiz Süreç Analizi',
     ctaSecondary: 'Nasıl Çalışır?',
   },
   problems: {
     badge: 'Problem',
-    heading: 'Bunlar size tanıdık geliyor mu?',
+    heading: 'Büyüyen her şirketin sessiz maliyeti',
     subheading: '',
     items: [
       {
-        title: 'Saatler tekrar eden işlere gidiyor',
+        title: 'Görünmez iş yükü',
         description:
-          'Ekibiniz her gün kopyala-yapıştır, elle veri girişi ve sistemler arası bilgi taşıma ile uğraşıyor. Asıl değer üretecek işlere zaman kalmıyor.',
+          "Ekibinizin gününün %40'ı kopyala-yapıştır, veri taşıma ve rutin yazışmalarla eriyor. Bu süre hiçbir raporda görünmüyor — ama maaş bordrosunda görünüyor.",
       },
       {
-        title: 'Küçük hatalar, büyük maliyetler',
+        title: 'Hata birikiyor',
         description:
-          'Manuel süreçlerde gözden kaçan bir satır, yanlış girilen bir rakam; iade, gecikme ve müşteri kaybı olarak geri dönüyor.',
+          'Manuel süreçte her adım bir hata fırsatı. Yanlış girilen tek rakam; iade, gecikme, güven kaybı olarak katlanıp geri dönüyor.',
       },
       {
-        title: 'Büyümek = daha çok insan mı?',
+        title: 'Büyüme darboğazı',
         description:
-          'İş hacmi arttıkça tek çözüm yeni işe alım gibi görünüyor. Oysa süreçler ölçeklenmedikçe, ekip büyüdükçe karmaşa da büyüyor.',
+          'Hacim 2 katına çıkınca iş yükü de 2 katına çıkıyorsa, süreçleriniz değil eforunuz ölçekleniyor demektir. Bu sürdürülemez.',
       },
     ],
   },
   solutions: {
     badge: 'Çözümlerimiz',
-    heading: 'Alturify bunu böyle çözüyor',
+    heading: 'Alturify farkı',
     subheading: '',
     items: [
       {
-        title: 'Uçtan uca otomasyon',
+        title: 'Günler içinde canlıda',
         description:
-          'Tekrarlayan görevleri yapay zeka destekli akışlara dönüştürüyoruz. Saatler süren işler dakikalara iniyor, ekibiniz stratejik işlere odaklanıyor.',
+          'Aylarca süren dönüşüm projeleri değil: en yüksek etkili süreci seçer, kurar ve günler içinde canlıya alırız. Değeri önce görürsünüz, sonra genişletirsiniz.',
       },
       {
-        title: 'Tutarlı ve denetlenebilir',
+        title: 'Kurumsal disiplinle',
         description:
-          'Otomasyonlar aynı işi her seferinde aynı kalitede yapar; her adım kayıt altındadır. Hata oranı düşer, denetim kolaylaşır.',
+          'Her otomasyon loglanır, test edilir, izlenir. Bir adım başarısız olursa haberiniz olur — sessizce bozulan süreç bizde yoktur.',
       },
       {
-        title: '10 kat hacim, aynı ekip',
+        title: 'Ekibinize katılan yapay zeka',
         description:
-          'İş hacmi arttığında otomasyonlar sizinle birlikte ölçeklenir. Yeni işe alım yerine, mevcut ekibinizin etkisini katlarsınız.',
+          'Araç satıp gitmiyoruz. Süreçlerinizi öğreniyor, otomasyonları işletiyor ve her ay ölçülebilir iyileştirme raporluyoruz.',
       },
     ],
   },
@@ -72,29 +72,29 @@ export const tr: Dictionary = {
     subheading: 'Üç net aşamada, mevcut sürecinizden tam otomasyona geçiyoruz.',
     stages: [
       {
-        label: 'Mevcut Durum',
-        title: 'Dağınık ve elle yürüyen süreç',
+        label: '01 — KEŞİF',
+        title: 'Süreçlerinizi haritalıyoruz',
         description:
-          'Önce mevcut iş akışınızı haritalıyoruz: nerede zaman kaybediliyor, nerede hata doğuyor, hangi adımlar otomasyona uygun.',
-        items: ['Dağınık veri kaynakları', 'Elle veri girişi ve taşıma', 'Tekrarlayan hatalar'],
+          'Ücretsiz analizde iş akışınızı uçtan uca çıkarıyoruz: zamanın nerede kaybolduğunu, hatanın nerede doğduğunu ve en yüksek getirili otomasyon fırsatını netleştiriyoruz.',
+        items: ['Uçtan uca süreç haritası', 'Zaman ve maliyet analizi', 'Önceliklendirilmiş fırsat listesi'],
       },
       {
-        label: 'Kurulum',
-        title: 'Akış tasarlanıyor ve bağlanıyor',
+        label: '02 — KURULUM',
+        title: 'Otomasyonu inşa ediyoruz',
         description:
-          'Süreçlerinizi yapay zeka modelleri ve mevcut araçlarınızla (CRM, ERP, e-posta, tablolar) entegre eden otomasyon hattını kuruyoruz.',
+          'Yapay zeka modellerini mevcut araçlarınıza — CRM, ERP, e-posta, tablolar — bağlıyor, gerçek verilerinizle test ediyor ve onayınızla devreye alıyoruz.',
         items: [
-          'Akış tasarımı ve entegrasyon',
-          'Mevcut araçlarınıza bağlanır',
-          'Gerçek verilerle test',
+          'Mevcut araçlarınızla entegre',
+          'Gerçek veriyle test',
+          'Onaylı, kademeli geçiş',
         ],
       },
       {
-        label: 'Canlı',
-        title: 'Süreç kendi kendine akıyor',
+        label: '03 — İŞLETME',
+        title: 'Sistem çalışır, biz izleriz',
         description:
-          'Sistem devrede: iş kendiliğinden akıyor, siz sadece sonuçları ve raporları görüyorsunuz. Biz izlemeye ve iyileştirmeye devam ediyoruz.',
-        items: ['7/24 kesintisiz çalışma', 'Sıfır manuel adım', 'Anlık raporlama ve izleme'],
+          'Otomasyon 7/24 çalışırken performansı izliyor, aksaklıklara müdahale ediyor ve her ay iyileştirme önerileriyle geliyoruz. Siz sadece sonuçları görürsünüz.',
+        items: ['7/24 izleme ve müdahale', 'Aylık iyileştirme raporu', 'Ölçülebilir sonuç panosu'],
       },
     ],
   },
@@ -102,47 +102,47 @@ export const tr: Dictionary = {
     badge: 'Canlı Sistem',
     live: 'Canlı',
     items: [
-      { value: '12.400+', label: 'Otomatikleştirilen saat' },
+      { value: '12.400+', label: 'Otomatikleştirilen iş saati' },
       { value: '%99,2', label: 'İşlem doğruluğu' },
-      { value: '8x', label: 'Ortalama hızlanma' },
-      { value: '7/24', label: 'Kesintisiz çalışma' },
+      { value: '8x', label: 'Ortalama süreç hızlanması' },
+      { value: '7/24', label: 'Kesintisiz operasyon' },
     ],
   },
   services: {
     badge: 'Hizmetler',
-    heading: 'Neler yapıyoruz',
+    heading: 'Uzmanlık alanlarımız',
     subheading: '',
     linkLabel: 'Detaylı Bilgi',
     items: [
       {
         title: 'Süreç Otomasyonu',
         description:
-          'Onay akışları, veri aktarımı, faturalama, raporlama gibi tekrarlayan operasyonel süreçleri uçtan uca otomatikleştiriyoruz.',
+          'Onay akışları, faturalama, sipariş işleme, raporlama — operasyonun omurgasını oluşturan süreçleri uçtan uca otomatikleştiriyoruz.',
       },
       {
         title: 'AI Asistanlar & Chatbotlar',
         description:
-          'Müşteri sorularını yanıtlayan, randevu alan, sipariş takibi yapan; markanızın dilini konuşan akıllı asistanlar kuruyoruz.',
+          'Müşteri sorularını yanıtlayan, randevu ve sipariş yöneten, markanızın dilini konuşan asistanlar — web, WhatsApp ve e-postada.',
       },
       {
         title: 'Doküman & Veri İşleme',
         description:
-          'Fatura, sözleşme, form, e-posta... Yapılandırılmamış belgeleri yapay zekayla okuyup sistemlerinize otomatik işliyoruz.',
+          'Fatura, sözleşme, form, e-posta: yapılandırılmamış belgeleri yapay zekayla okuyup doğrulayıp sistemlerinize saniyeler içinde işliyoruz.',
       },
       {
         title: 'Sistem Entegrasyonları',
         description:
-          'CRM, ERP, e-ticaret, muhasebe — kopuk çalışan araçlarınızı birbirine bağlıyor, veriyi tek akışta buluşturuyoruz.',
+          'CRM, ERP, e-ticaret, muhasebe — kopuk araçlarınızı tek bir veri akışında birleştiriyoruz. Çifte giriş ve senkron sorunları tarihe karışıyor.',
       },
       {
         title: 'Özel AI Çözümleri',
         description:
-          'Hazır araçların yetmediği yerde, işinize özel yapay zeka modelleri ve iç araçlar geliştiriyoruz.',
+          'Hazır araçların bittiği yerde başlıyoruz: işinize özel modeller, iç araçlar ve karar destek sistemleri geliştiriyoruz.',
       },
       {
         title: 'Otomasyon Danışmanlığı',
         description:
-          'Nereden başlayacağınızı bilmiyorsanız: süreçlerinizi analiz ediyor, en yüksek getirili otomasyon fırsatlarını yol haritasına döküyoruz.',
+          'Yatırım yapmadan önce net bir resim: süreç analizi, getiri hesabı ve önceliklendirilmiş yol haritası — rakamlarla, varsayımla değil.',
       },
     ],
   },
@@ -175,43 +175,43 @@ export const tr: Dictionary = {
     heading: 'Sıkça Sorulan Sorular',
     items: [
       {
-        question: 'Kurulum ne kadar sürer?',
+        question: 'İlk otomasyon ne kadar sürede canlıya alınır?',
         answer:
-          'Kapsama göre değişir: basit bir otomasyon 1-2 hafta içinde canlıya alınabilirken, çok sistemli entegrasyonlar 4-8 hafta sürebilir. İlk görüşmede net bir zaman planı sunuyoruz.',
+          'Keşif görüşmesinden sonra tipik olarak 1-3 hafta içinde. Basit akışlar günler içinde; çok sistemli entegrasyonlar 4-8 haftada tamamlanır. İlk görüşmede net bir takvim taahhüt ediyoruz.',
       },
       {
-        question: 'Mevcut araçlarımla entegre olur mu?',
+        question: 'Mevcut araçlarımızla entegre olur mu?',
         answer:
-          "Büyük olasılıkla evet. CRM, ERP, e-ticaret platformları, muhasebe yazılımları ve iletişim araçlarının çoğuyla çalışıyoruz. API'si olmayan eski sistemler için de alternatif yöntemlerimiz var.",
+          "Neredeyse her zaman evet. Yaygın CRM, ERP, e-ticaret ve muhasebe araçlarının tamamına yakınıyla çalıştık. API'si olmayan eski sistemler için de kanıtlanmış alternatif yöntemlerimiz var.",
       },
       {
-        question: 'Fiyatlandırma nasıl çalışıyor?',
+        question: 'Fiyatlandırma nasıl işliyor?',
         answer:
-          'Proje kapsamına göre teklif hazırlıyoruz. Süreç analizinden sonra sabit fiyatlı bir kurulum + opsiyonel aylık bakım/iyileştirme paketi sunuyoruz. İlk analiz görüşmesi ücretsizdir.',
+          'Ücretsiz süreç analizinden sonra sabit fiyatlı bir kurulum teklifi alırsınız — sürpriz maliyet yok. İsteğe bağlı aylık işletme/iyileştirme paketiyle devam edebilirsiniz.',
       },
       {
         question: 'Verilerimiz güvende mi?',
         answer:
-          'Evet. Verileriniz sizin sistemlerinizde kalır; otomasyonlar yetkilendirilmiş, şifreli bağlantılar üzerinden çalışır. Talebe göre KVKK/GDPR uyumlu veri işleme sözleşmesi imzalıyoruz.',
+          'Verileriniz sizin sistemlerinizde kalır; otomasyonlar yalnızca yetkilendirilmiş, şifreli bağlantılarla çalışır. KVKK/GDPR uyumlu çalışıyor, talep halinde veri işleme sözleşmesi imzalıyoruz.',
       },
       {
-        question: 'Teknik ekibimiz yok, sorun olur mu?',
+        question: 'Teknik ekibimiz yok — sorun olur mu?',
         answer:
-          'Hayır — zaten çoğu müşterimizin teknik ekibi yok. Kurulumu, bakımı ve izlemeyi biz üstleniyoruz; size sadece sonuç panelleri ve raporlar kalıyor.',
+          'Müşterilerimizin çoğunun yok. Kurulum, bakım ve izleme tamamen bizde; sizin tarafınızda teknik bilgi gerektiren hiçbir adım kalmıyor.',
       },
       {
-        question: 'Otomasyon işleri elimizden alır mı?',
+        question: 'Ya otomasyon bozulursa?',
         answer:
-          'Amaç insanları değil, angaryayı ortadan kaldırmak. Müşterilerimizde tipik sonuç: aynı ekip, daha yüksek hacim, daha değerli işlere ayrılan zaman.',
+          'Her otomasyon izleme ve uyarı sistemiyle canlıya alınır. Bir aksaklıkta önce biz haberdar oluruz, kritik akışlarda tanımlı müdahale süreleri taahhüt ederiz.',
       },
     ],
   },
   contact: {
     badge: 'İletişim',
     schedule: {
-      heading: '30 dakikada potansiyeli görün',
+      heading: '30 dakikalık keşif görüşmesi',
       description:
-        'Size uygun bir tarih ve saat seçin. Görüşmede süreçlerinize bakıp nelerin otomatikleştirilebileceğini birlikte çıkaralım — ücretsiz ve taahhütsüz.',
+        'Uygun bir zaman seçin. Görüşmede süreçlerinize birlikte bakar, otomasyona en uygun adımları ve tahmini kazancı netleştiririz — ücretsiz, taahhütsüz.',
     },
     form: {
       heading: 'Ya da bize yazın',
@@ -220,7 +220,7 @@ export const tr: Dictionary = {
       problem: 'Karşılaştığınız sorun',
       expectedSolution: 'Beklediğiniz çözüm',
       submit: 'Gönder',
-      successMessage: 'Mesajınız bize ulaştı. 24 saat içinde dönüş yapacağız.',
+      successMessage: 'Mesajınız bize ulaştı — 24 saat içinde dönüş yapıyoruz.',
     },
     info: {
       email: 'hello@alturify.com',
@@ -242,7 +242,7 @@ export const tr: Dictionary = {
   footer: {
     brand: 'Alturify',
     description:
-      'Alturify — işletmelerin tekrarlayan süreçlerini yapay zekayla dönüştüren otomasyon ajansı.',
+      'Alturify — büyüyen şirketlerin operasyonlarını yapay zekayla yeniden kuran otomasyon ajansı.',
     columns: [
       {
         heading: 'Şirket',
