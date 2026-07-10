@@ -13,6 +13,17 @@ export const en = {
   header: {
     cta: 'Book a Call',
   },
+  legal: {
+    backToHome: '← Back to Home',
+  },
+  cookieBanner: {
+    heading: 'Cookie Notice',
+    description:
+      "This site doesn't use analytics or tracking cookies right now — we only store one technical entry in your browser to remember your choice.",
+    learnMore: 'Learn more',
+    accept: 'Accept',
+    reject: 'Reject',
+  },
   hero: {
     headline: 'Your team thinks. The rest is automatic.',
     subheading:
@@ -270,6 +281,15 @@ export const en = {
           { label: 'Book a Call', href: '#contact' },
           { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
           { label: 'LinkedIn', href: '#' },
+        ],
+      },
+      {
+        heading: 'Legal',
+        links: [
+          { label: 'Privacy Policy', href: '/gizlilik-politikasi' },
+          { label: 'Terms of Service', href: '/kullanim-sartlari' },
+          { label: 'Cookie Policy', href: '/cerez-politikasi' },
+          { label: 'KVKK Disclosure Notice', href: '/kvkk' },
         ],
       },
     ],

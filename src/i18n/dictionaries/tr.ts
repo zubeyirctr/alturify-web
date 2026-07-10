@@ -15,6 +15,17 @@ export const tr: Dictionary = {
   header: {
     cta: 'Görüşme Ayarla',
   },
+  legal: {
+    backToHome: '← Ana Sayfaya Dön',
+  },
+  cookieBanner: {
+    heading: 'Çerez Tercihi',
+    description:
+      'Bu site şu anda analiz veya izleme çerezi kullanmıyor — yalnızca tercihinizi hatırlamak için tarayıcınızda tek bir teknik kayıt tutuyoruz.',
+    learnMore: 'Daha fazla bilgi',
+    accept: 'Kabul Et',
+    reject: 'Reddet',
+  },
   hero: {
     headline: 'Ekibiniz düşünsün. Gerisi otomatik.',
     subheading:
@@ -272,6 +283,15 @@ export const tr: Dictionary = {
           { label: 'Görüşme Ayarla', href: '#contact' },
           { label: 'hello@alturify.com', href: 'mailto:hello@alturify.com' },
           { label: 'LinkedIn', href: '#' },
+        ],
+      },
+      {
+        heading: 'Yasal',
+        links: [
+          { label: 'Gizlilik Politikası', href: '/gizlilik-politikasi' },
+          { label: 'Kullanım Şartları', href: '/kullanim-sartlari' },
+          { label: 'Çerez Politikası', href: '/cerez-politikasi' },
+          { label: 'KVKK Aydınlatma Metni', href: '/kvkk' },
         ],
       },
     ],

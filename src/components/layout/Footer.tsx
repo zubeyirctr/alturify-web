@@ -1,5 +1,7 @@
+import { Link, useLocation } from 'react-router-dom'
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { useLanguage } from '@/i18n/LanguageContext'
+import { ROUTES } from '@/lib/routes'
 
 function LinkedInIcon() {
   return (
@@ -40,14 +42,46 @@ const SOCIAL_LINKS = [
   { id: 'x', label: 'X', href: '#', Icon: XIcon },
 ]
 
+const linkClassName = 'text-body-md text-on-surface-variant transition-colors hover:text-secondary'
+
+// Column links are a mix of same-page hash anchors (only meaningful on the
+// homepage), a mailto link, and real routes to the legal pages — this picks
+// the right element/href for each so they work correctly from any page.
+function FooterLink({ href, label }: { href: string; label: string }) {
+  const { pathname } = useLocation()
+
+  if (href.startsWith('#')) {
+    const isHome = pathname === ROUTES.home
+    return (
+      <a href={isHome ? href : `${ROUTES.home}${href}`} className={linkClassName}>
+        {label}
+      </a>
+    )
+  }
+
+  if (href.startsWith('mailto:')) {
+    return (
+      <a href={href} className={linkClassName}>
+        {label}
+      </a>
+    )
+  }
+
+  return (
+    <Link to={href} className={linkClassName}>
+      {label}
+    </Link>
+  )
+}
+
 export function Footer() {
   const { t } = useLanguage()
 
   return (
     <footer className="mt-auto px-2 pb-4 md:px-8">
       <div className="mx-auto max-w-shell border-t border-outline-variant/40 pt-8">
-        <div className="grid grid-cols-1 gap-8 pb-8 md:grid-cols-[1.2fr_repeat(3,1fr)]">
-          <div className="flex flex-col gap-3">
+        <div className="grid grid-cols-2 gap-8 pb-8 md:grid-cols-[1.2fr_repeat(4,1fr)]">
+          <div className="col-span-2 flex flex-col gap-3 md:col-span-1">
             <span className="flex items-center gap-1.5">
               <span className="relative flex h-4 w-4 items-center justify-center rounded-md bg-primary-container/20">
                 <span className="absolute inset-0 rounded-md border border-primary-container/50" />
@@ -83,13 +117,7 @@ export function Footer() {
               </p>
               <nav className="flex flex-col gap-1.5">
                 {column.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-body-md text-on-surface-variant transition-colors hover:text-secondary"
-                  >
-                    {link.label}
-                  </a>
+                  <FooterLink key={link.label} href={link.href} label={link.label} />
                 ))}
               </nav>
             </div>
