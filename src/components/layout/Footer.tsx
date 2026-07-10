@@ -28,18 +28,10 @@ function InstagramIcon() {
   )
 }
 
-function XIcon() {
-  return (
-    <svg className="icon-invert h-2 w-2" role="presentation" aria-hidden="true">
-      <use href="/icons.svg#x-icon" />
-    </svg>
-  )
-}
-
+// TODO: hesap açılınca gerçek URL eklenecek
 const SOCIAL_LINKS = [
   { id: 'linkedin', label: 'LinkedIn', href: '#', Icon: LinkedInIcon },
   { id: 'instagram', label: 'Instagram', href: '#', Icon: InstagramIcon },
-  { id: 'x', label: 'X', href: '#', Icon: XIcon },
 ]
 
 const linkClassName = 'text-body-md text-on-surface-variant transition-colors hover:text-secondary'
@@ -100,8 +92,7 @@ export function Footer() {
                   key={id}
                   href={href}
                   aria-label={label}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(event) => event.preventDefault()}
                   className="glass-surface flex h-4 w-4 items-center justify-center rounded-md text-on-surface-variant transition-colors hover:text-secondary"
                 >
                   <Icon />
