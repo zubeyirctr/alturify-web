@@ -26,26 +26,45 @@ export function ParticleNetwork() {
     if (prefersReducedMotion || !isDesktop) return
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2)
-    let width = canvas.clientWidth
-    let height = canvas.clientHeight
+    let width = 0
+    let height = 0
+    let nodes: Node[] = []
 
+    // The hero's box size isn't stable at mount — web fonts swapping in
+    // reflow it after first paint, and a plain 'resize' window listener
+    // only fires for actual viewport changes, not content-driven ones. If
+    // the canvas backing store is sized before that settles, it's stuck at
+    // the wrong dimensions forever and the browser stretches it to fit,
+    // inflating every node/line. ResizeObserver reports the real box size
+    // whenever it changes, including that first reflow.
     function resize() {
-      width = canvas!.clientWidth
-      height = canvas!.clientHeight
+      const nextWidth = canvas!.clientWidth
+      const nextHeight = canvas!.clientHeight
+      if (nextWidth === 0 || nextHeight === 0) return
+
+      width = nextWidth
+      height = nextHeight
       canvas!.width = Math.floor(width * dpr)
       canvas!.height = Math.floor(height * dpr)
-      ctx!.scale(dpr, dpr)
-    }
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-    const nodes: Node[] = Array.from({ length: NODE_COUNT }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * SPEED,
-      vy: (Math.random() - 0.5) * SPEED,
-    }))
+      if (nodes.length === 0) {
+        nodes = Array.from({ length: NODE_COUNT }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * SPEED,
+          vy: (Math.random() - 0.5) * SPEED,
+        }))
+      }
+    }
 
     let rafId = 0
     function frame() {
+      if (width === 0 || height === 0) {
+        rafId = requestAnimationFrame(frame)
+        return
+      }
+
       ctx!.clearRect(0, 0, width, height)
 
       for (const node of nodes) {
@@ -84,12 +103,12 @@ export function ParticleNetwork() {
       rafId = requestAnimationFrame(frame)
     }
 
-    resize()
-    window.addEventListener('resize', resize)
+    const resizeObserver = new ResizeObserver(resize)
+    resizeObserver.observe(canvas)
     rafId = requestAnimationFrame(frame)
 
     return () => {
-      window.removeEventListener('resize', resize)
+      resizeObserver.disconnect()
       cancelAnimationFrame(rafId)
     }
   }, [])
