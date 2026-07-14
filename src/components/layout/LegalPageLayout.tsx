@@ -13,14 +13,12 @@ function LegalHeader() {
   return (
     <header className="sticky top-0 z-50 px-2 pt-2 md:px-8">
       <div className="glass-surface light-leak mx-auto flex h-8 max-w-shell items-center justify-between rounded-lg px-2.5">
-        <Link to={ROUTES.home} className="flex items-center gap-1.5">
-          <span className="relative flex h-4 w-4 items-center justify-center rounded-md bg-primary-container/20">
-            <span className="absolute inset-0 rounded-md border border-primary-container/50" />
-            <span className="h-1 w-1 rounded-full bg-primary shadow-[0_0_10px_2px_rgba(192,193,255,0.8)]" />
-          </span>
-          <span className="hidden font-sans text-body-lg font-semibold tracking-tight whitespace-nowrap text-on-background sm:inline">
-            Alturify
-          </span>
+        <Link to={ROUTES.home} className="flex items-center">
+          <img
+            src="/alturify-logo-horizontal.svg"
+            alt="Alturify"
+            className="h-[28px] w-auto md:h-[36px]"
+          />
         </Link>
 
         <Link

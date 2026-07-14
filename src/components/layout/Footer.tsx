@@ -74,15 +74,11 @@ export function Footer() {
       <div className="mx-auto max-w-shell border-t border-outline-variant/40 pt-8">
         <div className="grid grid-cols-2 gap-8 pb-8 md:grid-cols-[1.2fr_repeat(4,1fr)]">
           <div className="col-span-2 flex flex-col gap-3 md:col-span-1">
-            <span className="flex items-center gap-1.5">
-              <span className="relative flex h-4 w-4 items-center justify-center rounded-md bg-primary-container/20">
-                <span className="absolute inset-0 rounded-md border border-primary-container/50" />
-                <span className="h-1 w-1 rounded-full bg-primary shadow-[0_0_10px_2px_rgba(192,193,255,0.8)]" />
-              </span>
-              <span className="font-sans text-body-lg font-semibold tracking-tight text-on-background">
-                {t.footer.brand}
-              </span>
-            </span>
+            <img
+              src="/alturify-logo-horizontal.svg"
+              alt={t.footer.brand}
+              className="h-[36px] w-auto"
+            />
             <p className="max-w-[32ch] text-body-md text-on-surface-variant">
               {t.footer.description}
             </p>
